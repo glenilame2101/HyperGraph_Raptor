@@ -1,0 +1,633 @@
+{
+  "node_count": 32,
+  "edge_count": 30,
+  "max_level": 1,
+  "nodes": [
+    {
+      "id": "raptor_L0_0000",
+      "level": 0,
+      "type": "leaf",
+      "text": "# Cars (2006)\n\n## Overview\n\n- **Title:** Cars\n- **Studio:** Pixar Animation Studios / Walt Disney Pictures\n- **Director:** John Lasseter\n- **Co-Directors:** Joe Ranft\n- **Screenplay:** Dan Fogelman, John Lasseter, Joe Ranft, Kiel Murray, Phil Lorin, Jorgen Klubien\n- **Release Date:** June 9, 2006\n- **Genre:** Animated Comedy-Adventure\n- **Runtime:** 117 minutes\n\n---\n\n## Main Characters\n\n- **Lightning McQueen** -- A hotshot rookie race car, #95, sponsored by Rust-eze.",
+      "token_count": 138,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 0,
+        "source_offset_start": 0,
+        "source_offset_end": 471
+      }
+    },
+    {
+      "id": "raptor_L0_0001",
+      "level": 0,
+      "type": "leaf",
+      "text": "Arrogant and self-centered at the start, he learns humility and the value of friendship. - **Mater** -- A rusty but lovable tow truck in Radiator Springs. Becomes Lightning's best friend. - **Sally Carrera** -- A Porsche 911 and the town attorney of Radiator Springs. She left her fast-paced life in Los Angeles for a simpler existence. Lightning's love interest.",
+      "token_count": 86,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 1,
+        "source_offset_start": 472,
+        "source_offset_end": 835
+      }
+    },
+    {
+      "id": "raptor_L0_0002",
+      "level": 0,
+      "type": "leaf",
+      "text": "- **Doc Hudson** -- A 1951 Hudson Hornet who is the town judge and doctor. Secretly a legendary three-time Piston Cup champion known as the Fabulous Hudson Hornet. - **Sheriff** -- The law enforcement of Radiator Springs, a 1949 Mercury Police Cruiser. - **Ramone** -- A 1959 Chevrolet Impala Lowrider who runs the body art shop. Loves to repaint himself daily.",
+      "token_count": 92,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 2,
+        "source_offset_start": 836,
+        "source_offset_end": 1197
+      }
+    },
+    {
+      "id": "raptor_L0_0003",
+      "level": 0,
+      "type": "leaf",
+      "text": "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, the local gas station and diner. Ramone's wife. - **Luigi** -- A yellow Fiat 500 who runs Luigi's Casa Della Tires. Passionate about Ferrari. - **Guido** -- Luigi's small forklift assistant. Dreams of performing a real pit stop.",
+      "token_count": 81,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 3,
+        "source_offset_start": 1198,
+        "source_offset_end": 1480
+      }
+    },
+    {
+      "id": "raptor_L0_0004",
+      "level": 0,
+      "type": "leaf",
+      "text": "- **Sarge** -- A 1941 Willys military jeep who runs a surplus store. Constantly bickers with Fillmore. - **Fillmore** -- A 1960 VW Bus and the local hippie who sells organic fuel. - **Red** -- The shy fire truck of Radiator Springs. - **Lizzie** -- A 1923 Ford Model T, the oldest resident of Radiator Springs and widow of the town's founder, Stanley.",
+      "token_count": 95,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 4,
+        "source_offset_start": 1481,
+        "source_offset_end": 1832
+      }
+    },
+    {
+      "id": "raptor_L0_0005",
+      "level": 0,
+      "type": "leaf",
+      "text": "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car, #86. Lightning's ruthless rival on the track. - **The King (Strip Weathers)** -- A 1970 Plymouth Superbird, #43. The retiring veteran champion, modeled after Richard Petty. - **Mack** -- Lightning McQueen's loyal transport truck.",
+      "token_count": 75,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 5,
+        "source_offset_start": 1833,
+        "source_offset_end": 2117
+      }
+    },
+    {
+      "id": "raptor_L0_0006",
+      "level": 0,
+      "type": "leaf",
+      "text": "---\n\n## Plot Summary\n\n### Act 1: The Race and the Journey\n\nThe story begins at the final race of the Piston Cup season at the Motor Speedway of the South. Three cars are tied for the championship: the retiring legend **Strip \"The King\" Weathers**, the perennial runner-up **Chick Hicks**, and the brash rookie sensation **Lightning McQueen**. Lightning is talented but arrogant, refusing help from his pit crew and alienating everyone around him.",
+      "token_count": 99,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 6,
+        "source_offset_start": 2119,
+        "source_offset_end": 2565
+      }
+    },
+    {
+      "id": "raptor_L0_0007",
+      "level": 0,
+      "type": "leaf",
+      "text": "The race ends in an unprecedented three-way tie, and a tiebreaker race is scheduled for one week later at the Los Angeles International Speedway. Lightning is desperate to win because the Piston Cup championship will earn him the prestigious Dinoco sponsorship, replacing the retiring King. After the race, he pressures his transport truck **Mack** to drive through the night to reach California first. During the overnight drive, Mack falls asleep at the wheel.",
+      "token_count": 89,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 7,
+        "source_offset_start": 2566,
+        "source_offset_end": 3028
+      }
+    },
+    {
+      "id": "raptor_L0_0008",
+      "level": 0,
+      "type": "leaf",
+      "text": "When a group of reckless street racers (Boost, DJ, Wingo, and Snot Rod) startle Mack, Lightning tumbles out the back of the trailer onto the highway, lost and alone. Panicking, Lightning chases what he thinks is Mack through the darkness and accidentally tears through the small, forgotten town of **Radiator Springs** on Route 66, destroying the main road in the process.",
+      "token_count": 84,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 8,
+        "source_offset_start": 3030,
+        "source_offset_end": 3402
+      }
+    },
+    {
+      "id": "raptor_L0_0009",
+      "level": 0,
+      "type": "leaf",
+      "text": "He is apprehended by **Sheriff** after a wild chase and brought before the town's judge, **Doc Hudson**, the next morning. ### Act 2: Radiator Springs\n\nDoc initially wants to kick Lightning out of town, but **Sally Carrera**, the town attorney, argues that he should be made to fix the road he destroyed.",
+      "token_count": 72,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 9,
+        "source_offset_start": 3404,
+        "source_offset_end": 3708
+      }
+    },
+    {
+      "id": "raptor_L0_0010",
+      "level": 0,
+      "type": "leaf",
+      "text": "Lightning is sentenced to community service: he must repave the entire stretch of road using the town's road-paving machine, Bessie. Lightning at first tries to rush through the job, producing a terrible road surface. Doc challenges him to a race at Willy's Butte: if Lightning wins, he can leave; if Doc wins, Lightning has to start the road over. Lightning, confident he'll win easily, accepts.",
+      "token_count": 91,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 10,
+        "source_offset_start": 3710,
+        "source_offset_end": 4106
+      }
+    },
+    {
+      "id": "raptor_L0_0011",
+      "level": 0,
+      "type": "leaf",
+      "text": "But the dirt track has a sharp turn, and Lightning flies off into a cactus patch while Doc navigates the turn expertly. Lightning is forced to start over. As the days pass, Lightning reluctantly gets to know the residents of Radiator Springs. He learns the town was once a thriving stop on Route 66 but was bypassed when Interstate 40 was built, and the town slowly withered as travelers no longer came through.",
+      "token_count": 89,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 11,
+        "source_offset_start": 4108,
+        "source_offset_end": 4519
+      }
+    },
+    {
+      "id": "raptor_L0_0012",
+      "level": 0,
+      "type": "leaf",
+      "text": "Each resident has a story:\n\n- **Sally** tells Lightning about how she left her high-powered life in LA and found real happiness in the slower pace of Radiator Springs. - **Mater** befriends Lightning unconditionally, taking him tractor tipping and showing him genuine, uncomplicated friendship. - **Doc Hudson** remains cold and antagonistic toward Lightning.",
+      "token_count": 73,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 12,
+        "source_offset_start": 4521,
+        "source_offset_end": 4880
+      }
+    },
+    {
+      "id": "raptor_L0_0013",
+      "level": 0,
+      "type": "leaf",
+      "text": "While exploring Doc's garage, Lightning discovers three Piston Cup trophies and a newspaper clipping revealing Doc is the **Fabulous Hudson Hornet**, a racing legend from the 1950s. Doc had a terrible crash, and when he recovered, racing had moved on without him. He was replaced and forgotten, leaving him bitter toward the racing world.",
+      "token_count": 70,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 13,
+        "source_offset_start": 4881,
+        "source_offset_end": 5219
+      }
+    },
+    {
+      "id": "raptor_L0_0014",
+      "level": 0,
+      "type": "leaf",
+      "text": "Lightning confronts Doc about his past, but Doc angrily tells him the racing world is hollow and will chew him up and spit him out just as it did to Doc. Lightning's attitude gradually shifts. He begins to genuinely care about the town and its residents. He gets a new paint job from **Ramone**, new tires from **Luigi** and **Guido**, and fills up at **Flo's V8 Cafe**.",
+      "token_count": 89,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 14,
+        "source_offset_start": 5221,
+        "source_offset_end": 5591
+      }
+    },
+    {
+      "id": "raptor_L0_0015",
+      "level": 0,
+      "type": "leaf",
+      "text": "He drives with Sally to the Wheel Well Motel overlooking the town at sunset, and Sally tells him the history of Route 66 and how the Interstate took the magic of the journey away. Lightning begins to fall for Sally and the town itself. One evening, Lightning takes everyone for a cruise down the main drag and turns on all the neon lights of the old businesses, revealing the town's former beauty. For one magical night, Radiator Springs glows as it once did.",
+      "token_count": 97,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 15,
+        "source_offset_start": 5593,
+        "source_offset_end": 6052
+      }
+    },
+    {
+      "id": "raptor_L0_0016",
+      "level": 0,
+      "type": "leaf",
+      "text": "### Act 3: Discovery, Departure, and the Big Race\n\nJust as Lightning finishes the road and begins to truly bond with the community, the media, alerted by Doc (who called them hoping to get Lightning out of town and out of their lives), descends on Radiator Springs. Mack arrives, and Lightning is whisked away to California for the tiebreaker race before he can even say goodbye.",
+      "token_count": 84,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 16,
+        "source_offset_start": 6055,
+        "source_offset_end": 6434
+      }
+    },
+    {
+      "id": "raptor_L0_0017",
+      "level": 0,
+      "type": "leaf",
+      "text": "The town is left stunned, and Doc, seeing how heartbroken everyone is, realizes he made a mistake. At the Los Angeles International Speedway, Lightning is physically present but emotionally absent. He can't stop thinking about his friends in Radiator Springs. He starts the race poorly, distracted and unfocused. Then over his radio, he hears a familiar voice: **Doc Hudson**, who has come to the race as Lightning's crew chief, wearing his old Fabulous Hudson Hornet colors.",
+      "token_count": 98,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 17,
+        "source_offset_start": 6435,
+        "source_offset_end": 6910
+      }
+    },
+    {
+      "id": "raptor_L0_0018",
+      "level": 0,
+      "type": "leaf",
+      "text": "Behind Doc, the entire town of Radiator Springs has come to serve as Lightning's pit crew. **Guido** finally gets to perform a real pit stop (and does it in record time, stunning everyone). **Mater**, **Luigi**, **Sarge**, **Fillmore**, **Ramone**, **Flo**, **Sheriff**, and **Red** are all there, cheering him on. Inspired by his friends, Lightning surges back into contention.",
+      "token_count": 95,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 18,
+        "source_offset_start": 6913,
+        "source_offset_end": 7291
+      }
+    },
+    {
+      "id": "raptor_L0_0019",
+      "level": 0,
+      "type": "leaf",
+      "text": "The race comes down to the final lap between Lightning, Chick Hicks, and The King. Chick, desperate to win, deliberately rams The King, sending him into a horrifying crash that mirrors Doc Hudson's wreck decades earlier. Lightning is about to cross the finish line and win the Piston Cup when he sees The King's crumpled body on the infield. He remembers Doc's story, how racing abandoned him after his crash, and he makes a choice.",
+      "token_count": 95,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 19,
+        "source_offset_start": 7293,
+        "source_offset_end": 7725
+      }
+    },
+    {
+      "id": "raptor_L0_0020",
+      "level": 0,
+      "type": "leaf",
+      "text": "Lightning **slams on his brakes** just inches from the finish line. Chick Hicks crosses first and wins the Piston Cup, but Lightning doesn't care. He reverses back to The King and pushes him across the finish line so that the veteran can finish his last race with dignity. The crowd erupts. Chick Hicks is booed on the podium despite his victory, and his hollow win means nothing.",
+      "token_count": 85,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 20,
+        "source_offset_start": 7727,
+        "source_offset_end": 8107
+      }
+    },
+    {
+      "id": "raptor_L0_0021",
+      "level": 0,
+      "type": "leaf",
+      "text": "### Epilogue\n\nLightning turns down the Dinoco sponsorship, staying loyal to his original sponsor, Rust-eze, because they believed in him when no one else did. He does request one small favor from Dinoco's owner: a helicopter ride for Mater (which Mater has always dreamed of). Lightning decides to establish his racing headquarters in **Radiator Springs**, putting the town back on the map.",
+      "token_count": 82,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 21,
+        "source_offset_start": 8109,
+        "source_offset_end": 8499
+      }
+    },
+    {
+      "id": "raptor_L0_0022",
+      "level": 0,
+      "type": "leaf",
+      "text": "Tourists begin visiting again, the businesses reopen to thriving crowds, and the town is reborn. Lightning and Sally begin a relationship, and Lightning has found something far more valuable than any trophy: a home, real friends, and the understanding that life is about the journey, not just the finish line. ---\n\n## Themes\n\n- **Slowing down to appreciate life:** The central message of the film is that the journey matters more than the destination.",
+      "token_count": 91,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 22,
+        "source_offset_start": 8501,
+        "source_offset_end": 8952
+      }
+    },
+    {
+      "id": "raptor_L0_0023",
+      "level": 0,
+      "type": "leaf",
+      "text": "Route 66's replacement by the Interstate serves as a metaphor for how modern life prioritizes speed and efficiency over experience and connection. - **Community and friendship:** Lightning transforms from a selfish loner (\"I'm a one-man show\") into someone who values others and recognizes that no one succeeds alone. - **Legacy and being forgotten:** Doc Hudson's story explores what happens when someone is cast aside after giving everything, and how bitterness can give way to mentorship.",
+      "token_count": 93,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 23,
+        "source_offset_start": 8954,
+        "source_offset_end": 9445
+      }
+    },
+    {
+      "id": "raptor_L0_0024",
+      "level": 0,
+      "type": "leaf",
+      "text": "- **Humility and sportsmanship:** Lightning's decision to forfeit the race to help The King finish is the ultimate demonstration of character growth. - **Redemption:** Both Lightning and Doc find redemption -- Lightning by becoming a better car, and Doc by re-engaging with the racing world he had shut out.",
+      "token_count": 63,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 24,
+        "source_offset_start": 9446,
+        "source_offset_end": 9753
+      }
+    },
+    {
+      "id": "raptor_L0_0025",
+      "level": 0,
+      "type": "leaf",
+      "text": "---\n\n## Notable Quotes\n\n> \"I'm a precision instrument of speed and aerodynamics.\" -- Lightning McQueen\n\n> \"I'm happier than a tornado in a trailer park!\" -- Mater\n\n> \"I create feelings in others that they themselves don't understand.\" -- Lightning McQueen\n\n> \"Turn right to go left.\" -- Doc Hudson\n\n> \"It was the town that got to him.",
+      "token_count": 82,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 25,
+        "source_offset_start": 9755,
+        "source_offset_end": 10089
+      }
+    },
+    {
+      "id": "raptor_L0_0026",
+      "level": 0,
+      "type": "leaf",
+      "text": "They changed him.\" -- Sally Carrera\n\n> \"These are good folk around here, who care about one another. I don't want them depending on someone they can't count on.\" -- Doc Hudson\n\n> \"I knew you couldn't drive.",
+      "token_count": 51,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 26,
+        "source_offset_start": 10090,
+        "source_offset_end": 10296
+      }
+    },
+    {
+      "id": "raptor_L0_0027",
+      "level": 0,
+      "type": "leaf",
+      "text": "I didn't know you couldn't read.\" -- Doc Hudson\n\n> \"Float like a Cadillac, sting like a Beemer.\" -- Lightning McQueen\n\n> \"There's a lot more to racing than just winning.\" -- Doc Hudson (The Fabulous Hudson Hornet)\n\n---\n\n## Soundtrack Highlights\n\n- **\"Real Gone\"** by Sheryl Crow -- Opening racing sequence\n- **\"Life Is a Highway\"** by Rascal Flatts -- Lightning's road trip montage\n- **\"Our Town\"** by James Taylor -- Radiator Springs' melancholy history (nominated for Academy Award for Best Original Song)\n- **\"Behind the Clouds\"** by Brad Paisley -- End credits\n- **\"Route 66\"** by Chuck Berry -- Classic Route 66 anthem\n\n---\n\n## Legacy\n\n*Cars* was a massive commercial success, grossing over $460 million worldwide.",
+      "token_count": 183,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 27,
+        "source_offset_start": 10297,
+        "source_offset_end": 11016
+      }
+    },
+    {
+      "id": "raptor_L0_0028",
+      "level": 0,
+      "type": "leaf",
+      "text": "It launched one of Pixar's most lucrative franchises, generating billions in merchandise revenue. The film spawned two sequels -- *Cars 2* (2011) and *Cars 3* (2017) -- as well as spin-off films (*Planes*, 2013), short films, theme park attractions (Cars Land at Disney California Adventure), and an extensive toy line.",
+      "token_count": 77,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 28,
+        "source_offset_start": 11017,
+        "source_offset_end": 11336
+      }
+    },
+    {
+      "id": "raptor_L0_0029",
+      "level": 0,
+      "type": "leaf",
+      "text": "The film was the last project that **Joe Ranft**, Pixar's beloved head of story, worked on before his death in a car accident in 2005. The film is dedicated to his memory. *Cars* holds a special place in Pixar's filmography as director John Lasseter's deeply personal love letter to Route 66, classic American car culture, and the small towns that time forgot.",
+      "token_count": 82,
+      "metadata": {
+        "doc_id": "Cars_Movie",
+        "chunk_idx": 29,
+        "source_offset_start": 11338,
+        "source_offset_end": 11698
+      }
+    },
+    {
+      "id": "raptor_L1_0000",
+      "level": 1,
+      "type": "summary",
+      "text": "At the final Piston Cup race at the Motor Speedway of the South, retiring legend Strip “The King” Weathers, perennial runner-up Chick Hicks, and brash rookie Lightning McQueen finish in an unprecedented three-way tie, setting a tiebreaker for one week later at the Los Angeles International Speedway; arrogant and self-centered, Lightning wants the championship to secure the prestigious Dinoco sponsorship replacing the retiring King, pressures his transport truck Mack to drive overnight, and after reckless street racers Boost, DJ, Wingo, and Snot Rod startle Mack, tumbles from the trailer, gets lost, and tears through Radiator Springs on Route 66, destroying its main road. Apprehended by Sheriff and brought before Judge Doc Hudson, Lightning is nearly kicked out until Sally Carrera—a Porsche 911, the town attorney, who left her fast-paced Los Angeles life for a simpler one in Radiator Springs and becomes Lightning’s love interest—argues he should repair the damage; sentenced to repave the road with Bessie, he botches it by rushing, then loses a wager race against Doc at Willy’s Butte when Doc expertly handles a sharp dirt-track turn and Lightning crashes into a cactus patch, forcing him to start over. As he remains in town, Lightning learns Radiator Springs was once a thriving Route 66 stop before Interstate 40 bypassed it; he is befriended by Mater, a rusty but lovable tow truck who becomes his best friend, goes tractor tipping, hears Sally explain how the Interstate took the magic out of the journey, receives a new paint job from Ramone, new tires from Luigi and Guido, stops at Flo’s V8 Cafe, and helps revive the town’s spirit by cruising the main drag and lighting its neon, while Doc stays cold, insisting the racing world is hollow and will chew racers up and spit them out. Lightning gradually learns humility, friendship, community, and that the journey matters more than the destination, changing from a selfish loner who says “I’m a one-man show” and boasts, “I’m a precision instrument of speed and aerodynamics” and “I create feelings in others that they themselves don’t understand,” into someone who genuinely cares about others; Doc’s bitterness reflects legacy, abandonment, and redemption after his own devastating crash, encapsulated in “Turn right to go left” and “These are good folk around here, who care about one another. I don’t want them depending on someone they can’t count on,” while Sally later says, “It was the town that got to him. They changed him.” Just as Lightning finishes the road and bonds with the town, Doc—hoping to get him out of their lives—alerts the media, Mack arrives, and Lightning is whisked to California before saying goodbye; realizing his mistake, Doc appears at the tiebreaker as Lightning’s crew chief in his old Fabulous Hudson Hornet colors, with Mater, Luigi, Guido, Sarge, Fillmore, Ramone, Flo, Sheriff, and Red serving as pit crew, where Guido performs a real pit stop in record time. Distracted at first, Lightning rallies, but on the final lap Chick deliberately rams The King into a horrific crash mirroring Doc’s wreck decades earlier; inches from winning, Lightning slams on his brakes, lets Chick take the Piston Cup, then reverses to push The King across the finish line so he can complete his last race with dignity, demonstrating humility and sportsmanship as Chick is booed for his hollow victory. In the epilogue, Lightning turns down Dinoco, remains loyal to Rust-eze because they believed in him when no one else did, asks Dinoco’s owner for one favor—a helicopter ride Mater has always dreamed of (“I’m happier than a tornado in a trailer park!”)—and establishes his racing headquarters in Radiator Springs, reviving tourism and businesses; Lightning and Sally begin a relationship, Doc and Lightning both find redemption, and Lightning discovers a home, real friends, and values more important than any trophy.",
+      "token_count": 828,
+      "metadata": {
+        "child_ids": [
+          "raptor_L0_0001",
+          "raptor_L0_0006",
+          "raptor_L0_0007",
+          "raptor_L0_0008",
+          "raptor_L0_0009",
+          "raptor_L0_0010",
+          "raptor_L0_0011",
+          "raptor_L0_0012",
+          "raptor_L0_0014",
+          "raptor_L0_0015",
+          "raptor_L0_0016",
+          "raptor_L0_0017",
+          "raptor_L0_0018",
+          "raptor_L0_0019",
+          "raptor_L0_0020",
+          "raptor_L0_0021",
+          "raptor_L0_0022",
+          "raptor_L0_0023",
+          "raptor_L0_0024",
+          "raptor_L0_0025",
+          "raptor_L0_0026"
+        ],
+        "cluster_label": 0
+      }
+    },
+    {
+      "id": "raptor_L1_0001",
+      "level": 1,
+      "type": "summary",
+      "text": "Cars is a 2006 animated comedy-adventure from Pixar Animation Studios and Walt Disney Pictures, directed by John Lasseter, co-directed by Joe Ranft, written by Dan Fogelman, John Lasseter, Joe Ranft, Kiel Murray, Phil Lorin, and Jorgen Klubien, released June 9, 2006, with a runtime of 117 minutes. It centers on hotshot rookie race car Lightning McQueen, #95, sponsored by Rust-eze, alongside Radiator Springs residents including Doc Hudson, a 1951 Hudson Hornet who serves as town judge and doctor and is secretly the Fabulous Hudson Hornet, a legendary three-time Piston Cup champion; Sheriff, a 1949 Mercury Police Cruiser; Ramone, a 1959 Chevrolet Impala Lowrider who runs the body art shop and repaints himself daily; Flo, a 1950s show car who runs Flo's V8 Cafe, the local gas station and diner, and is Ramone's wife; Luigi, a yellow Fiat 500 who runs Luigi's Casa Della Tires and loves Ferrari; Guido, Luigi's small forklift assistant who dreams of performing a real pit stop; Sarge, a 1941 Willys military jeep who runs a surplus store and bickers with Fillmore; Fillmore, a 1960 VW Bus who sells organic fuel; Red, the shy fire truck; Lizzie, a 1923 Ford Model T, oldest resident and widow of founder Stanley; Chick Hicks, a ruthless rival and 1979 Shyster Cremlin stock car, #86; The King, or Strip Weathers, a retiring veteran champion and 1970 Plymouth Superbird, #43, modeled after Richard Petty; and Mack, Lightning’s loyal transport truck. While exploring Doc’s garage, Lightning finds three Piston Cup trophies and a newspaper clipping revealing Doc’s 1950s fame and that after a terrible crash he recovered only to find racing had moved on, leaving him replaced, forgotten, and bitter toward the sport. Notable lines include Doc’s “I didn't know you couldn't read.” and “There's a lot more to racing than just winning,” and Lightning’s “Float like a Cadillac, sting like a Beemer.” Soundtrack highlights are “Real Gone” by Sheryl Crow for the opening racing sequence, “Life Is a Highway” by Rascal Flatts for Lightning’s road trip montage, “Our Town” by James Taylor for Radiator Springs’ melancholy history, which was nominated for the Academy Award for Best Original Song, “Behind the Clouds” by Brad Paisley in the end credits, and “Route 66” by Chuck Berry. The film grossed over $460 million worldwide, launched one of Pixar’s most lucrative franchises with billions in merchandise revenue, and spawned Cars 2 (2011), Cars 3 (2017), spin-off films including Planes (2013), short films, theme park attractions including Cars Land at Disney California Adventure, and an extensive toy line. It was the last project worked on by Pixar head of story Joe Ranft before his death in a car accident in 2005, is dedicated to his memory, and holds a special place in Pixar’s filmography as John Lasseter’s personal love letter to Route 66, classic American car culture, and forgotten small towns.",
+      "token_count": 691,
+      "metadata": {
+        "child_ids": [
+          "raptor_L0_0000",
+          "raptor_L0_0002",
+          "raptor_L0_0003",
+          "raptor_L0_0004",
+          "raptor_L0_0005",
+          "raptor_L0_0013",
+          "raptor_L0_0027",
+          "raptor_L0_0028",
+          "raptor_L0_0029"
+        ],
+        "cluster_label": 1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0001",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0006",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0007",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0008",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0009",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0010",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0011",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0012",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0014",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0015",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0016",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0017",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0018",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0019",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0020",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0021",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0022",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0023",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0024",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0025",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0000",
+      "target": "raptor_L0_0026",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0000",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0002",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0003",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0004",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0005",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0013",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0027",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0028",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    },
+    {
+      "source": "raptor_L1_0001",
+      "target": "raptor_L0_0029",
+      "weight": 1.0,
+      "edge_type": "parent_child"
+    }
+  ]
+}

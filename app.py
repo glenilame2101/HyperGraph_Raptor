@@ -13,7 +13,6 @@ import os
 import pickle
 import random
 import re
-import ssl
 import sys
 import tempfile
 import time
@@ -21,14 +20,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
-import httpx
 import hypernetx as hnx
 import networkx as nx
 import numpy as np
 import streamlit as st
 import torch
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
 from pydantic import BaseModel
 
 # ---------------------------------------------------------------------------
@@ -49,6 +46,7 @@ from GraphReasoning.graph_tools import (
     update_hypernode_embeddings,
 )
 from GraphReasoning.prompt_config import get_prompt
+from GraphReasoning.llm_client import create_llm, create_embed_client, LocalBGEClient
 
 # ---------------------------------------------------------------------------
 # Pydantic models for structured LLM output (same as scripts/)
@@ -62,42 +60,6 @@ class Event(BaseModel):
 
 class HypergraphJSON(BaseModel):
     events: List[Event]
-
-
-# ---------------------------------------------------------------------------
-# Embedding client (same as scripts/run_make_new_hypergraph.py)
-# ---------------------------------------------------------------------------
-
-class LocalBGEClient:
-    def __init__(self, base_url: str = "http://127.0.0.1:8080", model: str = "BAAI/bge-m3", timeout: float = 120.0):
-        self.base_url = base_url.rstrip("/")
-        self.model = model
-        self.client = httpx.Client(timeout=timeout)
-
-    def encode(self, text: str):
-        try:
-            response = self.client.post(
-                f"{self.base_url}/v1/embeddings",
-                json={"model": self.model, "input": text},
-            )
-            if response.status_code < 400:
-                data = response.json()
-                return np.array(data["data"][0]["embedding"], dtype=np.float32)
-        except Exception:
-            pass
-        response = self.client.post(
-            f"{self.base_url}/embed",
-            json={"model": self.model, "input": [text]},
-        )
-        response.raise_for_status()
-        data = response.json()
-        if "embeddings" in data:
-            vector = data["embeddings"][0]
-        elif "data" in data and isinstance(data["data"], list):
-            vector = data["data"][0]
-        else:
-            raise ValueError(f"Unsupported embedding response: {list(data.keys())}")
-        return np.array(vector, dtype=np.float32)
 
 
 # ---------------------------------------------------------------------------
@@ -436,14 +398,12 @@ with tab_pipeline:
 
             # --- Build LLM client ---
             try:
-                http_client = httpx.Client(verify=False, timeout=120.0)
-                client = ChatOpenAI(
+                client = create_llm(
                     base_url=llm_url,
                     model=llm_model,
                     api_key=llm_api_key,
-                    http_client=http_client,
                     max_tokens=llm_max_tokens,
-                    temperature=0,
+                    verify_ssl=False,
                 )
                 log_msg(f"LLM client ready: {llm_model} @ {llm_url}")
             except Exception as e:
@@ -498,9 +458,9 @@ with tab_pipeline:
                         image_path = next(Path(".").glob(f"**/{Path(image).name}"))
                     image_uri = image_to_base64_data_uri(str(image_path))
                     response = client.invoke([
-                        {"role": "system", "content": system_prompt or "Describe this figure."},
+                        {"role": "system", "content": system_prompt or get_prompt("runtime", "figure_system_prompt")},
                         {"role": "user", "content": [
-                            {"type": "text", "text": prompt or "Describe this figure in technical detail."},
+                            {"type": "text", "text": prompt or get_prompt("runtime", "figure_user_prompt")},
                             {"type": "image_url", "image_url": {"url": image_uri}},
                         ]},
                     ])

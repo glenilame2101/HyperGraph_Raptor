@@ -18,6 +18,7 @@ import random
 from pyvis.network import Network
 from tqdm.notebook import tqdm
 from GraphReasoning.utils import *
+from GraphReasoning.prompt_config import get_prompt
 from hypernetx import Hypergraph
 palette = "hls"
 
@@ -869,12 +870,8 @@ def remove_small_hyperfragments(
 
 
 def simplify_node_name_with_llm(node_name, generate, max_tokens=2048, temperature=0.3):
-    # Generate a prompt for the LLM to simplify or describe the node name
-    system_prompt='You are an ontological graph maker. You carefully rename nodes in complex networks.'
-    prompt = f"Provide a simplified, more descriptive name for a network node named '{node_name}' that reflects its importance or role within a network."
-   
-    # Assuming 'generate' is a function that calls the LLM with the given prompt
-    #simplified_name = generate(system_prompt=system_prompt, prompt)
+    system_prompt = get_prompt("graph_tools", "node_rename_system")
+    prompt = get_prompt("graph_tools", "node_rename_user", node_name=node_name)
     simplified_name = generate(system_prompt=system_prompt, prompt=prompt, max_tokens=max_tokens, temperature=temperature)
    
     return simplified_name
@@ -2479,7 +2476,7 @@ def summarize_communities(graph, communities, generate):
             
 #         description += " ".join(relationships)
 
-        response = generate(system_prompt= "You are an expert in multiple engineering fields. Summarize the following relationships and make a professional report.",
+        response = generate(system_prompt=get_prompt("graph_tools", "community_summary_system"),
                                        prompt= description)
 
         print(description)
@@ -2487,40 +2484,7 @@ def summarize_communities(graph, communities, generate):
         community_summaries.append(summary)
     return community_summaries
 
-EXTRACT_PROMPT = """
-You are a strict scientific keyword extractor.
-
-Your job is to extract ONLY the concrete scientific entities mentioned
-in the text (e.g., materials, chemicals, biological entities, properties).
-Do NOT extract abstract concepts, verbs, or relational words.
-
-Rules:
-- Output ONLY valid JSON.
-- Format: {"keywords": ["keyword1", "keyword2", ...]}
-- Extract ONLY MATERIALS / SUBSTANCES / SPECIFIC ENTITIES.
-- DO NOT extract:
-    - verbs (e.g., relate, interact, form, behave)
-    - question words (how, why, what)
-    - abstract concepts (mechanistic relation, mechanism, relationship)
-    - adjectives or descriptors (mechanistic, structural, functional)
-- Keep acronyms in original case (e.g., PCL, PLA, PEG).
-- Otherwise, lowercase all extracted words.
-- No explanations, no markdown, no code fences.
-
-Examples:
-
-Context: What is the capital of the United States?
-{"keywords": ["united states"]}
-
-Context: How can silk mechanistically relate to PCL?
-{"keywords": ["silk", "PCL"]}
-
-Context: What technology is Taiwan famous for?
-{"keywords": ["taiwan", "technology", "semiconductor"]}
-
-Context: What is CVD uniformity and etching uniformity?
-{"keywords": ["cvd", "etching", "uniformity"]}
-"""
+EXTRACT_PROMPT = get_prompt("graph_tools", "extract_keywords_system")
 
 ##TEST
 import re
@@ -2629,20 +2593,7 @@ def extract_keywords_to_nodes(
     return nodes
 
 
-EXTRACT_MATERIAL_PROMPT = """
-You are a strict keyword extractor.
-
-Rules:
-- Output EXACTLY one JSON object: {"keywords": [<strings>]} with no extra text.
-- If any materials/chemicals/compounds are present, RETURN ONLY those (lowercased, deduplicated).
-- Otherwise, include domain nouns (processes, properties, entities), but never verbs, stopwords, or question words.
-- Preserve common acronyms (e.g., CVD, PLA) in their original case; otherwise lowercase.
-- No explanations.
-
-Example:
-Context: ```What is a formulation for a composite design that can combine chitosan and silk?```
-{"keywords": ["chitosan", "silk"]}
-"""
+EXTRACT_MATERIAL_PROMPT = get_prompt("graph_tools", "extract_material_keywords_system")
 
 def extract_material_keywords_to_nodes(question, generate, node_embeddings, embedding_tokenizer, embedding_model, N_samples=5, similarity_threshold=0.9):
     response = generate(system_prompt=EXTRACT_MATERIAL_PROMPT,
@@ -2672,12 +2623,12 @@ def local_search(question, generate, graph, node_embeddings, embedding_tokenizer
     subgraph = find_shortest_path_subgraph_between_nodes(graph.to_directed(), nodes)
     information = collect_entities(subgraph)
 
-    response = generate(system_prompt= "Answer the query detailedly based on the collected information and the provided current thought. If you think the report doesn't help, you should just keep the current thought.",
-                               prompt=f"Based on the following... Report: {information}. I can give you the detailed answer to the query: {question}")
+    response = generate(system_prompt=get_prompt("graph_tools", "local_search_system"),
+                               prompt=get_prompt("graph_tools", "local_search_user", information=information, question=question))
     #--- validation ---
-    reason = generate(system_prompt= "You are a senior professional in the field. Answer yes or no whether the answer is good enough for the question. You only provide reason when you think it is not answering the question.",
-                               prompt=f"Question: {question} Answer: {response}")
-    if 'yes' in reason.lower():
+    reason = generate(system_prompt=get_prompt("graph_tools", "query_validation_system"),
+                               prompt=get_prompt("graph_tools", "query_validation_user", question=question, response=response))
+    if reason.strip().upper().startswith("YES"):
         return response
     else:
         return reason
@@ -2700,8 +2651,8 @@ def global_search(question, generate, graph, communities, community_summaries, n
     last_response=''
     # all_responses=[]    
     for i, summary in enumerate(np.array(community_summaries)[list(target_community)]):
-        response = generate(system_prompt= "Answer the query detailedly based on the collected information and the provided current thought. If you think the report doesn't help, you should just keep the current thought.",
-                                   prompt=f"Based on the following... Report:{summary}. Information: {information}. Current thought: {last_response}. I can give you the detailed answer to the query: {question}")
+        response = generate(system_prompt=get_prompt("graph_tools", "global_search_system"),
+                                   prompt=get_prompt("graph_tools", "global_search_user", summary=summary, information=information, last_response=last_response, question=question))
     #     all_responses.append(response)
         last_response=response
         

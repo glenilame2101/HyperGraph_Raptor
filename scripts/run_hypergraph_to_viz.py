@@ -1,13 +1,9 @@
 import argparse
 import os
-import ssl
 import sys
 from pathlib import Path
 from typing import List
 
-import httpx
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
 from pydantic import BaseModel
 
 
@@ -52,10 +48,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--prompt-config", default=None)
     parser.add_argument("--chunk-size", type=int, default=10000)
     parser.add_argument("--chunk-overlap", type=int, default=0)
-    parser.add_argument("--max-tokens", type=int, default=20000)
-    parser.add_argument("--llm-timeout", type=float, default=120.0)
-    parser.add_argument("--no-ssl-verify", action="store_true")
-    parser.add_argument("--no-proxy", action="store_true")
     parser.add_argument("--overwrite", action="store_true", help="Regenerate even if json/html already exists")
     return parser.parse_args()
 
@@ -63,14 +55,15 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     workspace_root = Path(__file__).resolve().parent.parent
-    load_dotenv(dotenv_path=workspace_root / ".env")
 
     if str(workspace_root) not in sys.path:
         sys.path.insert(0, str(workspace_root))
 
+    from GraphReasoning.llm_client import create_llm
     from GraphReasoning.graph_generation import make_hypergraph_from_text
     from GraphReasoning.hypergraph_store import HypergraphBuilder
     from GraphReasoning.hypergraph_viz import visualize_hypergraph
+    from GraphReasoning.prompt_config import get_prompt
 
     doc_dir = resolve_path(args.doc_data_dir, workspace_root)
     json_out_dir = resolve_path(args.json_out_dir, workspace_root)
@@ -86,32 +79,7 @@ def main() -> None:
     if not docs:
         raise FileNotFoundError(f"No markdown docs found in: {doc_dir}")
 
-    cert_default = workspace_root / "certs" / "knapp.pem"
-    cert_path = os.getenv("CERT_PATH", str(cert_default))
-    verify_value = ssl.create_default_context(cafile=cert_path) if os.path.exists(cert_path) else True
-    if args.no_ssl_verify:
-        verify_value = False
-
-    base_url = os.getenv("URL")
-    model_name = os.getenv("MODEL_NAME")
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not base_url or not model_name or not api_key:
-        raise ValueError("Missing env vars. Set URL, MODEL_NAME, OPENAI_API_KEY in your .env")
-
-    http_client = httpx.Client(
-        verify=verify_value,
-        timeout=args.llm_timeout,
-        trust_env=not args.no_proxy,
-    )
-
-    client = ChatOpenAI(
-        base_url=base_url,
-        model=model_name,
-        api_key=api_key,
-        http_client=http_client,
-        max_tokens=args.max_tokens,
-        temperature=0,
-    )
+    client = create_llm()
 
     def generate(
         system_prompt: str | None = None,
@@ -120,7 +88,7 @@ def main() -> None:
         **_: dict,
     ):
         messages = [
-            {"role": "system", "content": system_prompt or "Extract hypergraph events."},
+            {"role": "system", "content": system_prompt or get_prompt("runtime", "viz_system_prompt")},
             {"role": "user", "content": prompt},
         ]
         return client.with_structured_output(response_model).invoke(messages)

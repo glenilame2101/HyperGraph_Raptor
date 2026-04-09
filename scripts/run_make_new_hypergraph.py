@@ -5,52 +5,16 @@ import os
 import pickle
 import random
 import re
-import ssl
 import sys
 import time
 from datetime import datetime
 from pathlib import Path
 from typing import List
 
-import httpx
 import numpy as np
 import torch
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
 from pydantic import BaseModel
-
-
-class LocalBGEClient:
-    def __init__(self, base_url: str = "http://127.0.0.1:8080", model: str = "BAAI/bge-m3", timeout: float = 120.0):
-        self.base_url = base_url.rstrip("/")
-        self.model = model
-        self.client = httpx.Client(timeout=timeout)
-
-    def encode(self, text: str):
-        try:
-            response = self.client.post(
-                f"{self.base_url}/v1/embeddings",
-                json={"model": self.model, "input": text},
-            )
-            if response.status_code < 400:
-                data = response.json()
-                return np.array(data["data"][0]["embedding"], dtype=np.float32)
-        except Exception:
-            pass
-
-        response = self.client.post(
-            f"{self.base_url}/embed",
-            json={"model": self.model, "input": [text]},
-        )
-        response.raise_for_status()
-        data = response.json()
-        if "embeddings" in data:
-            vector = data["embeddings"][0]
-        elif "data" in data and isinstance(data["data"], list):
-            vector = data["data"][0]
-        else:
-            raise ValueError(f"Unsupported embedding response format: {list(data.keys())}")
-        return np.array(vector, dtype=np.float32)
 
 
 class Event(BaseModel):
@@ -127,6 +91,7 @@ def main() -> None:
         sys.path.insert(0, str(workspace_root))
 
     from GraphReasoning.prompt_config import get_prompt
+    from GraphReasoning.llm_client import create_llm, create_embed_client
 
     artifacts_root_path = resolve_path(args.artifacts_root, workspace_root)
     data_dir_path = resolve_path(args.data_dir, workspace_root) if args.data_dir else (artifacts_root_path / "graphs").resolve()
@@ -150,42 +115,20 @@ def main() -> None:
     except ImportError:
         pass  # not required when using with_structured_output
 
-    cert_default = workspace_root / "certs" / "knapp.pem"
-    cert_path = os.getenv("CERT_PATH", str(cert_default))
-    verify_value = ssl.create_default_context(cafile=cert_path) if os.path.exists(cert_path) else True
-    if args.no_ssl_verify:
-        verify_value = False
-
-    base_url = os.getenv("URL")
-    model_name = os.getenv("MODEL_NAME")
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not base_url or not model_name or not api_key:
-        raise ValueError("Missing env vars. Set URL, MODEL_NAME, OPENAI_API_KEY in your .env")
-
-    http_client = httpx.Client(
-        verify=verify_value,
+    client = create_llm(
         timeout=args.llm_timeout,
-        trust_env=not args.no_proxy,
-    )
-    client = ChatOpenAI(
-        base_url=base_url,
-        model=model_name,
-        api_key=api_key,
-        http_client=http_client,
         max_tokens=args.max_tokens,
-        temperature=0,
+        verify_ssl=not args.no_ssl_verify,
+        trust_env=not args.no_proxy,
     )
 
     if not args.skip_preflight:
+        import httpx as _httpx
         try:
-            preflight_client = httpx.Client(
-                verify=verify_value,
-                timeout=min(10.0, args.llm_timeout),
-                trust_env=not args.no_proxy,
-            )
-            preflight_url = base_url.rstrip("/")
-            if not preflight_url.endswith("/v1"):
-                preflight_url = f"{preflight_url}/v1"
+            base_url = os.getenv("URL", "").rstrip("/")
+            api_key = os.getenv("OPENAI_API_KEY", "")
+            preflight_url = base_url if base_url.endswith("/v1") else f"{base_url}/v1"
+            preflight_client = _httpx.Client(timeout=min(10.0, args.llm_timeout))
             response = preflight_client.get(f"{preflight_url}/models", headers={"Authorization": f"Bearer {api_key}"})
             print(f"[preflight] GET {preflight_url}/models -> {response.status_code}")
             if response.status_code >= 500:
@@ -205,7 +148,7 @@ def main() -> None:
     print(f"[paths] cache_dir={cache_dir_path}")
 
     embedding_tokenizer = None
-    embedding_model = LocalBGEClient(base_url=args.bge_url, model=args.bge_model)
+    embedding_model = create_embed_client(base_url=args.bge_url, model=args.bge_model)
 
     embedding_path = data_dir_path / args.embedding_file
     if os.path.exists(embedding_path):
@@ -235,7 +178,7 @@ def main() -> None:
         )
         current_merged_i = extract_idx(merged_graph_list[0]) if merged_graph_list else 0
 
-    print(f"[config] model={model_name} | url={base_url}")
+    print(f"[config] model={os.getenv('MODEL_NAME')} | url={os.getenv('URL')}")
     print(f"[config] thread={args.thread_index}/{args.total_threads} | merge_every={args.merge_every}")
     print(f"[config] current_merged_i={current_merged_i} | doc_count={len(doc_list)}")
     print(
@@ -289,7 +232,7 @@ def main() -> None:
         ]
         prompt_chars = len(prompt)
         print(
-            f"[llm] call #{call_id} | model={model_name} | "
+            f"[llm] call #{call_id} | model={os.getenv('MODEL_NAME')} | "
             f"prompt_len={prompt_chars} chars | schema={response_model.__name__}"
         )
         structured_llm = client.with_structured_output(response_model)

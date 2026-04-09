@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(python -c \"from GraphReasoning.prompt_config import load_prompt_config; import json; c = load_prompt_config\\(\\); print\\(json.dumps\\(list\\(c.keys\\(\\)\\), indent=2\\)\\)\")",
+      "Bash(python -c ':*)",
+      "Bash(grep -n \"ChatOpenAI\\\\|httpx\\\\|OPENAI_API_KEY\\\\|MODEL_NAME\\\\|load_dotenv\" /c/Users/gleni/Desktop/HyperGraph_Raptor/GraphReasoning/*.py)",
+      "Bash(ls c:/Users/gleni/Desktop/HyperGraph_Raptor/*.md c:/Users/gleni/Desktop/HyperGraph_Raptor/*.txt)"
+    ]
+  }
+}

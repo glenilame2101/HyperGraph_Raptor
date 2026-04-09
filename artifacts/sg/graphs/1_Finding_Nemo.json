@@ -1,0 +1,5211 @@
+{
+  "metadata": {
+    "created_at": "2026-04-08T18:13:46.801962",
+    "source_document": "1_Finding_Nemo",
+    "version": "2.0"
+  },
+  "nodes": {
+    "n_c880ddc7": {
+      "id": "n_c880ddc7",
+      "label": "Finding Nemo",
+      "type": "concept"
+    },
+    "n_0fbae561": {
+      "id": "n_0fbae561",
+      "label": "2003",
+      "type": "concept"
+    },
+    "n_073d9acb": {
+      "id": "n_073d9acb",
+      "label": "Pixar Animation Studios",
+      "type": "concept"
+    },
+    "n_a8f4f29c": {
+      "id": "n_a8f4f29c",
+      "label": "Walt Disney Pictures",
+      "type": "concept"
+    },
+    "n_40419478": {
+      "id": "n_40419478",
+      "label": "Andrew Stanton",
+      "type": "concept"
+    },
+    "n_5a3755a9": {
+      "id": "n_5a3755a9",
+      "label": "Lee Unkrich",
+      "type": "concept"
+    },
+    "n_98b0b3fc": {
+      "id": "n_98b0b3fc",
+      "label": "Bob Peterson",
+      "type": "concept"
+    },
+    "n_78387806": {
+      "id": "n_78387806",
+      "label": "David Reynolds",
+      "type": "concept"
+    },
+    "n_d288ed61": {
+      "id": "n_d288ed61",
+      "label": "May 30, 2003",
+      "type": "concept"
+    },
+    "n_dae5ccc2": {
+      "id": "n_dae5ccc2",
+      "label": "Animated Comedy-Adventure",
+      "type": "concept"
+    },
+    "n_2ba6c123": {
+      "id": "n_2ba6c123",
+      "label": "100 minutes",
+      "type": "concept"
+    },
+    "n_fcd63ec4": {
+      "id": "n_fcd63ec4",
+      "label": "$940.3 million worldwide",
+      "type": "concept"
+    },
+    "n_231e1322": {
+      "id": "n_231e1322",
+      "label": "Marlin",
+      "type": "concept"
+    },
+    "n_f89f3330": {
+      "id": "n_f89f3330",
+      "label": "Nemo",
+      "type": "concept"
+    },
+    "n_1ae80d30": {
+      "id": "n_1ae80d30",
+      "label": "Coral",
+      "type": "concept"
+    },
+    "n_7508c3e6": {
+      "id": "n_7508c3e6",
+      "label": "fear",
+      "type": "concept"
+    },
+    "n_552e071e": {
+      "id": "n_552e071e",
+      "label": "anxiety",
+      "type": "concept"
+    },
+    "n_332d0ec7": {
+      "id": "n_332d0ec7",
+      "label": "rules",
+      "type": "concept"
+    },
+    "n_8a861f13": {
+      "id": "n_8a861f13",
+      "label": "caution",
+      "type": "concept"
+    },
+    "n_0d6dfdd9": {
+      "id": "n_0d6dfdd9",
+      "label": "smaller right fin",
+      "type": "concept"
+    },
+    "n_77c47966": {
+      "id": "n_77c47966",
+      "label": "lucky fin",
+      "type": "concept"
+    },
+    "n_dec184b6": {
+      "id": "n_dec184b6",
+      "label": "brave",
+      "type": "concept"
+    },
+    "n_3a1e95d2": {
+      "id": "n_3a1e95d2",
+      "label": "curious",
+      "type": "concept"
+    },
+    "n_a30ee9b5": {
+      "id": "n_a30ee9b5",
+      "label": "eager to prove himself",
+      "type": "concept"
+    },
+    "n_8c676f82": {
+      "id": "n_8c676f82",
+      "label": "Dory",
+      "type": "concept"
+    },
+    "n_46fbefb3": {
+      "id": "n_46fbefb3",
+      "label": "regal blue tang",
+      "type": "concept"
+    },
+    "n_272923e0": {
+      "id": "n_272923e0",
+      "label": "severe short-term memory loss",
+      "type": "concept"
+    },
+    "n_03b3129d": {
+      "id": "n_03b3129d",
+      "label": "optimistic",
+      "type": "concept"
+    },
+    "n_3b118747": {
+      "id": "n_3b118747",
+      "label": "kind",
+      "type": "concept"
+    },
+    "n_9bb5f23f": {
+      "id": "n_9bb5f23f",
+      "label": "journey across the ocean",
+      "type": "concept"
+    },
+    "n_30615025": {
+      "id": "n_30615025",
+      "label": "Gill",
+      "type": "concept"
+    },
+    "n_117c800c": {
+      "id": "n_117c800c",
+      "label": "Moorish idol",
+      "type": "concept"
+    },
+    "n_4eeb5e9f": {
+      "id": "n_4eeb5e9f",
+      "label": "Tank Gang",
+      "type": "concept"
+    },
+    "n_c031c74c": {
+      "id": "n_c031c74c",
+      "label": "scarred from a failed escape attempt",
+      "type": "concept"
+    },
+    "n_2c08ebe2": {
+      "id": "n_2c08ebe2",
+      "label": "the ocean",
+      "type": "concept"
+    },
+    "n_2af09ca6": {
+      "id": "n_2af09ca6",
+      "label": "courage to escape",
+      "type": "concept"
+    },
+    "n_43345ead": {
+      "id": "n_43345ead",
+      "label": "Bruce",
+      "type": "concept"
+    },
+    "n_cdd3be01": {
+      "id": "n_cdd3be01",
+      "label": "great white shark",
+      "type": "concept"
+    },
+    "n_f128fee8": {
+      "id": "n_f128fee8",
+      "label": "being vegetarian",
+      "type": "concept"
+    },
+    "n_50be07d7": {
+      "id": "n_50be07d7",
+      "label": "Fish-Friendly Sharks support group",
+      "type": "concept"
+    },
+    "n_b9a5e199": {
+      "id": "n_b9a5e199",
+      "label": "Fish are friends, not food.",
+      "type": "concept"
+    },
+    "n_66422bbb": {
+      "id": "n_66422bbb",
+      "label": "Crush",
+      "type": "concept"
+    },
+    "n_49253b30": {
+      "id": "n_49253b30",
+      "label": "150-year-old green sea turtle",
+      "type": "concept"
+    },
+    "n_88c3f575": {
+      "id": "n_88c3f575",
+      "label": "Squirt",
+      "type": "concept"
+    },
+    "n_c4520e65": {
+      "id": "n_c4520e65",
+      "label": "East Australian Current (EAC)",
+      "type": "concept"
+    },
+    "n_f216087e": {
+      "id": "n_f216087e",
+      "label": "letting go",
+      "type": "concept"
+    },
+    "n_0fc660fc": {
+      "id": "n_0fc660fc",
+      "label": "trusting his child",
+      "type": "concept"
+    },
+    "n_12df03a2": {
+      "id": "n_12df03a2",
+      "label": "adventurous",
+      "type": "concept"
+    },
+    "n_0512a832": {
+      "id": "n_0512a832",
+      "label": "fearless",
+      "type": "concept"
+    },
+    "n_5a9ddbaa": {
+      "id": "n_5a9ddbaa",
+      "label": "what a confident child looks like when given freedom",
+      "type": "concept"
+    },
+    "n_9fb39604": {
+      "id": "n_9fb39604",
+      "label": "Nigel",
+      "type": "concept"
+    },
+    "n_2fd76d41": {
+      "id": "n_2fd76d41",
+      "label": "brown pelican",
+      "type": "concept"
+    },
+    "n_5a813ff1": {
+      "id": "n_5a813ff1",
+      "label": "Marlin's story",
+      "type": "concept"
+    },
+    "n_1274b4f4": {
+      "id": "n_1274b4f4",
+      "label": "P. Sherman",
+      "type": "concept"
+    },
+    "n_94e02661": {
+      "id": "n_94e02661",
+      "label": "Philip Sherman",
+      "type": "concept"
+    },
+    "n_bab9bb3f": {
+      "id": "n_bab9bb3f",
+      "label": "scuba-diving dentist",
+      "type": "concept"
+    },
+    "n_d03994f1": {
+      "id": "n_d03994f1",
+      "label": "Sydney",
+      "type": "concept"
+    },
+    "n_2760a7a4": {
+      "id": "n_2760a7a4",
+      "label": "office overlooking the harbor",
+      "type": "concept"
+    },
+    "n_025ff7d6": {
+      "id": "n_025ff7d6",
+      "label": "Darla",
+      "type": "concept"
+    },
+    "n_fa6821b7": {
+      "id": "n_fa6821b7",
+      "label": "shaking a previous fish to death",
+      "type": "concept"
+    },
+    "n_cba315a7": {
+      "id": "n_cba315a7",
+      "label": "Bloat",
+      "type": "concept"
+    },
+    "n_80ecd358": {
+      "id": "n_80ecd358",
+      "label": "porcupine pufferfish",
+      "type": "concept"
+    },
+    "n_e7903716": {
+      "id": "n_e7903716",
+      "label": "a temper",
+      "type": "concept"
+    },
+    "n_290ef0e3": {
+      "id": "n_290ef0e3",
+      "label": "Peach",
+      "type": "concept"
+    },
+    "n_dc7829e0": {
+      "id": "n_dc7829e0",
+      "label": "starfish",
+      "type": "concept"
+    },
+    "n_c237d3be": {
+      "id": "n_c237d3be",
+      "label": "tank glass",
+      "type": "concept"
+    },
+    "n_875c5c70": {
+      "id": "n_875c5c70",
+      "label": "lookout",
+      "type": "concept"
+    },
+    "n_7ea87422": {
+      "id": "n_7ea87422",
+      "label": "Jacques",
+      "type": "concept"
+    },
+    "n_fc0a5a5e": {
+      "id": "n_fc0a5a5e",
+      "label": "cleaner shrimp",
+      "type": "concept"
+    },
+    "n_d43e6352": {
+      "id": "n_d43e6352",
+      "label": "cleanliness",
+      "type": "concept"
+    },
+    "n_725d5d21": {
+      "id": "n_725d5d21",
+      "label": "Gurgle",
+      "type": "concept"
+    },
+    "n_b2682744": {
+      "id": "n_b2682744",
+      "label": "royal gramma",
+      "type": "concept"
+    },
+    "n_e60d3e03": {
+      "id": "n_e60d3e03",
+      "label": "germs",
+      "type": "concept"
+    },
+    "n_1be40611": {
+      "id": "n_1be40611",
+      "label": "Deb",
+      "type": "concept"
+    },
+    "n_b6cb6563": {
+      "id": "n_b6cb6563",
+      "label": "four-striped damselfish",
+      "type": "concept"
+    },
+    "n_ccda0585": {
+      "id": "n_ccda0585",
+      "label": "Flo",
+      "type": "concept"
+    },
+    "n_14093435": {
+      "id": "n_14093435",
+      "label": "Bubbles",
+      "type": "concept"
+    },
+    "n_2be71040": {
+      "id": "n_2be71040",
+      "label": "yellow tang",
+      "type": "concept"
+    },
+    "n_fb8f7846": {
+      "id": "n_fb8f7846",
+      "label": "bubbles",
+      "type": "concept"
+    },
+    "n_5a70a0c9": {
+      "id": "n_5a70a0c9",
+      "label": "clutch of over 400 eggs",
+      "type": "concept"
+    },
+    "n_ddd8ad57": {
+      "id": "n_ddd8ad57",
+      "label": "anemone home",
+      "type": "concept"
+    },
+    "n_a6d465b7": {
+      "id": "n_a6d465b7",
+      "label": "Great Barrier Reef",
+      "type": "concept"
+    },
+    "n_2f88577d": {
+      "id": "n_2f88577d",
+      "label": "barracuda",
+      "type": "concept"
+    },
+    "n_6ac8ddf8": {
+      "id": "n_6ac8ddf8",
+      "label": "eggs",
+      "type": "concept"
+    },
+    "n_f2c13018": {
+      "id": "n_f2c13018",
+      "label": "barracuda attack",
+      "type": "concept"
+    },
+    "n_c78ea3eb": {
+      "id": "n_c78ea3eb",
+      "label": "nearly every egg",
+      "type": "concept"
+    },
+    "n_388f71b0": {
+      "id": "n_388f71b0",
+      "label": "one tiny, damaged egg",
+      "type": "concept"
+    },
+    "n_f0b49658": {
+      "id": "n_f0b49658",
+      "label": "first day of school",
+      "type": "concept"
+    },
+    "n_62aa1a91": {
+      "id": "n_62aa1a91",
+      "label": "dangers",
+      "type": "concept"
+    },
+    "n_19c8680c": {
+      "id": "n_19c8680c",
+      "label": "warnings",
+      "type": "concept"
+    },
+    "n_a64f1e77": {
+      "id": "n_a64f1e77",
+      "label": "other young fish",
+      "type": "concept"
+    },
+    "n_8608d5b2": {
+      "id": "n_8608d5b2",
+      "label": "their more relaxed parents",
+      "type": "concept"
+    },
+    "n_6027ff87": {
+      "id": "n_6027ff87",
+      "label": "classmates",
+      "type": "concept"
+    },
+    "n_48b3c0a7": {
+      "id": "n_48b3c0a7",
+      "label": "Drop-Off",
+      "type": "concept"
+    },
+    "n_34a32c09": {
+      "id": "n_34a32c09",
+      "label": "the wall where the reef ends and the open ocean begins",
+      "type": "concept"
+    },
+    "n_b9a2755f": {
+      "id": "n_b9a2755f",
+      "label": "boat anchored in the deep water",
+      "type": "concept"
+    },
+    "n_2702587a": {
+      "id": "n_2702587a",
+      "label": "boat",
+      "type": "concept"
+    },
+    "n_26df5d33": {
+      "id": "n_26df5d33",
+      "label": "proving he's capable",
+      "type": "concept"
+    },
+    "n_7e2ce3dc": {
+      "id": "n_7e2ce3dc",
+      "label": "scuba diver",
+      "type": "concept"
+    },
+    "n_890f9761": {
+      "id": "n_890f9761",
+      "label": "diver's mask",
+      "type": "concept"
+    },
+    "n_fa282991": {
+      "id": "n_fa282991",
+      "label": "P. Sherman, 42 Wallaby Way, Sydney",
+      "type": "concept"
+    },
+    "n_de957c96": {
+      "id": "n_de957c96",
+      "label": "open ocean",
+      "type": "concept"
+    },
+    "n_1c29e208": {
+      "id": "n_1c29e208",
+      "label": "which way the boat went",
+      "type": "concept"
+    },
+    "n_60bc53f6": {
+      "id": "n_60bc53f6",
+      "label": "Dory's short-term memory loss",
+      "type": "concept"
+    },
+    "n_b8d95d78": {
+      "id": "n_b8d95d78",
+      "label": "forgets things almost as quickly as she learns them",
+      "type": "concept"
+    },
+    "n_2cf8d833": {
+      "id": "n_2cf8d833",
+      "label": "journey",
+      "type": "concept"
+    },
+    "n_3991b940": {
+      "id": "n_3991b940",
+      "label": "Dory's optimism",
+      "type": "concept"
+    },
+    "n_617bb5e0": {
+      "id": "n_617bb5e0",
+      "label": "Dory's fearlessness",
+      "type": "concept"
+    },
+    "n_0014078f": {
+      "id": "n_0014078f",
+      "label": "Marlin's anxiety",
+      "type": "concept"
+    },
+    "n_68240b69": {
+      "id": "n_68240b69",
+      "label": "Marlin's caution",
+      "type": "concept"
+    },
+    "n_9e481a3b": {
+      "id": "n_9e481a3b",
+      "label": "Anchor",
+      "type": "concept"
+    },
+    "n_888ced01": {
+      "id": "n_888ced01",
+      "label": "Chum",
+      "type": "concept"
+    },
+    "n_17000332": {
+      "id": "n_17000332",
+      "label": "hammerhead",
+      "type": "concept"
+    },
+    "n_917a6eb0": {
+      "id": "n_917a6eb0",
+      "label": "mako",
+      "type": "concept"
+    },
+    "n_ef522031": {
+      "id": "n_ef522031",
+      "label": "support group to stop eating fish",
+      "type": "concept"
+    },
+    "n_be5cc657": {
+      "id": "n_be5cc657",
+      "label": "drop of blood from Dory's nose",
+      "type": "concept"
+    },
+    "n_8bcc0898": {
+      "id": "n_8bcc0898",
+      "label": "torpedo from a sunken submarine",
+      "type": "concept"
+    },
+    "n_525ad299": {
+      "id": "n_525ad299",
+      "label": "old naval mines",
+      "type": "concept"
+    },
+    "n_a826747d": {
+      "id": "n_a826747d",
+      "label": "deep ocean trench",
+      "type": "concept"
+    },
+    "n_de64e87c": {
+      "id": "n_de64e87c",
+      "label": "monstrous anglerfish",
+      "type": "concept"
+    },
+    "n_bbeb7c7f": {
+      "id": "n_bbeb7c7f",
+      "label": "reading",
+      "type": "concept"
+    },
+    "n_3a982e1b": {
+      "id": "n_3a982e1b",
+      "label": "school of moonfish",
+      "type": "concept"
+    },
+    "n_fe3469f3": {
+      "id": "n_fe3469f3",
+      "label": "directions",
+      "type": "concept"
+    },
+    "n_29a833c7": {
+      "id": "n_29a833c7",
+      "label": "not to swim through the trench",
+      "type": "concept"
+    },
+    "n_dd2b04f5": {
+      "id": "n_dd2b04f5",
+      "label": "to swim over it instead",
+      "type": "concept"
+    },
+    "n_f607b879": {
+      "id": "n_f607b879",
+      "label": "advice from school of moonfish",
+      "type": "concept"
+    },
+    "n_a04bb1c7": {
+      "id": "n_a04bb1c7",
+      "label": "trench",
+      "type": "concept"
+    },
+    "n_ade85026": {
+      "id": "n_ade85026",
+      "label": "forest of jellyfish",
+      "type": "concept"
+    },
+    "n_0c17facf": {
+      "id": "n_0c17facf",
+      "label": "jellyfish",
+      "type": "concept"
+    },
+    "n_7495eb51": {
+      "id": "n_7495eb51",
+      "label": "consciousness",
+      "type": "concept"
+    },
+    "n_21d84fb4": {
+      "id": "n_21d84fb4",
+      "label": "different philosophy of parenting",
+      "type": "concept"
+    },
+    "n_101635e2": {
+      "id": "n_101635e2",
+      "label": "current",
+      "type": "concept"
+    },
+    "n_dba528dd": {
+      "id": "n_dba528dd",
+      "label": "urge to intervene",
+      "type": "concept"
+    },
+    "n_1fa04818": {
+      "id": "n_1fa04818",
+      "label": "his own way back",
+      "type": "concept"
+    },
+    "n_39445bdf": {
+      "id": "n_39445bdf",
+      "label": "protecting Nemo from everything isn't the same as being a good father",
+      "type": "concept"
+    },
+    "n_9ae9d359": {
+      "id": "n_9ae9d359",
+      "label": "story of his quest",
+      "type": "concept"
+    },
+    "n_23f057c8": {
+      "id": "n_23f057c8",
+      "label": "story of Marlin's quest",
+      "type": "concept"
+    },
+    "n_8bd84b47": {
+      "id": "n_8bd84b47",
+      "label": "turtle",
+      "type": "concept"
+    },
+    "n_56c2b24e": {
+      "id": "n_56c2b24e",
+      "label": "sea horse",
+      "type": "concept"
+    },
+    "n_14838cf8": {
+      "id": "n_14838cf8",
+      "label": "dolphin",
+      "type": "concept"
+    },
+    "n_7bdff0d1": {
+      "id": "n_7bdff0d1",
+      "label": "pelican",
+      "type": "concept"
+    },
+    "n_64c652bb": {
+      "id": "n_64c652bb",
+      "label": "entire ocean",
+      "type": "concept"
+    },
+    "n_2f0e4437": {
+      "id": "n_2f0e4437",
+      "label": "dentist's office window",
+      "type": "concept"
+    },
+    "n_4b5d5c31": {
+      "id": "n_4b5d5c31",
+      "label": "blue whale",
+      "type": "concept"
+    },
+    "n_ddf0d809": {
+      "id": "n_ddf0d809",
+      "label": "speaking whale",
+      "type": "concept"
+    },
+    "n_122f04cc": {
+      "id": "n_122f04cc",
+      "label": "the whale is telling them to let go",
+      "type": "concept"
+    },
+    "n_edf9b957": {
+      "id": "n_edf9b957",
+      "label": "Sydney Harbour",
+      "type": "concept"
+    },
+    "n_28689550": {
+      "id": "n_28689550",
+      "label": "fish tank in P. Sherman's dental office at 42 Wallaby Way, Sydney",
+      "type": "concept"
+    },
+    "n_caf85610": {
+      "id": "n_caf85610",
+      "label": "harbour",
+      "type": "concept"
+    },
+    "n_928256e8": {
+      "id": "n_928256e8",
+      "label": "freedom",
+      "type": "concept"
+    },
+    "n_5423b794": {
+      "id": "n_5423b794",
+      "label": "ocean",
+      "type": "concept"
+    },
+    "n_e0a972ff": {
+      "id": "n_e0a972ff",
+      "label": "escape plan",
+      "type": "concept"
+    },
+    "n_aa4204ea": {
+      "id": "n_aa4204ea",
+      "label": "jam the tank's filter with a pebble",
+      "type": "concept"
+    },
+    "n_197546f8": {
+      "id": "n_197546f8",
+      "label": "dentist removes fish and puts them in plastic bags to clean the tank",
+      "type": "concept"
+    },
+    "n_a4477376": {
+      "id": "n_a4477376",
+      "label": "fish in plastic bags",
+      "type": "concept"
+    },
+    "n_5d9da078": {
+      "id": "n_5d9da078",
+      "label": "roll off the counter",
+      "type": "concept"
+    },
+    "n_02c5cb46": {
+      "id": "n_02c5cb46",
+      "label": "out the window",
+      "type": "concept"
+    },
+    "n_d77b2529": {
+      "id": "n_d77b2529",
+      "label": "across the road",
+      "type": "concept"
+    },
+    "n_459a8580": {
+      "id": "n_459a8580",
+      "label": "into the harbour",
+      "type": "concept"
+    },
+    "n_576b660d": {
+      "id": "n_576b660d",
+      "label": "Nemo's first attempt",
+      "type": "concept"
+    },
+    "n_61b9fa84": {
+      "id": "n_61b9fa84",
+      "label": "failure",
+      "type": "concept"
+    },
+    "n_a71b15ae": {
+      "id": "n_a71b15ae",
+      "label": "filter",
+      "type": "concept"
+    },
+    "n_3f5f7529": {
+      "id": "n_3f5f7529",
+      "label": "guilt",
+      "type": "concept"
+    },
+    "n_f93d6c7c": {
+      "id": "n_f93d6c7c",
+      "label": "plan",
+      "type": "concept"
+    },
+    "n_f4b79a2a": {
+      "id": "n_f4b79a2a",
+      "label": "window",
+      "type": "concept"
+    },
+    "n_1b7717d8": {
+      "id": "n_1b7717d8",
+      "label": "news that Marlin has crossed the entire ocean looking for his son",
+      "type": "concept"
+    },
+    "n_4397144c": {
+      "id": "n_4397144c",
+      "label": "sharks",
+      "type": "concept"
+    },
+    "n_3dc7dd77": {
+      "id": "n_3dc7dd77",
+      "label": "a whale",
+      "type": "concept"
+    },
+    "n_3f19ac0f": {
+      "id": "n_3f19ac0f",
+      "label": "jamming the filter",
+      "type": "concept"
+    },
+    "n_392fd1df": {
+      "id": "n_392fd1df",
+      "label": "breakdown",
+      "type": "concept"
+    },
+    "n_84662d0e": {
+      "id": "n_84662d0e",
+      "label": "tank",
+      "type": "concept"
+    },
+    "n_c821b9bf": {
+      "id": "n_c821b9bf",
+      "label": "filthy",
+      "type": "concept"
+    },
+    "n_da4ce4d5": {
+      "id": "n_da4ce4d5",
+      "label": "dentist",
+      "type": "concept"
+    },
+    "n_452ce85e": {
+      "id": "n_452ce85e",
+      "label": "high-tech new filter",
+      "type": "concept"
+    },
+    "n_2184cfee": {
+      "id": "n_2184cfee",
+      "label": "birthday",
+      "type": "concept"
+    },
+    "n_10aad388": {
+      "id": "n_10aad388",
+      "label": "spotless",
+      "type": "concept"
+    },
+    "n_3ffec50b": {
+      "id": "n_3ffec50b",
+      "label": "fish",
+      "type": "concept"
+    },
+    "n_046439f5": {
+      "id": "n_046439f5",
+      "label": "trapped",
+      "type": "concept"
+    },
+    "n_d4068da2": {
+      "id": "n_d4068da2",
+      "label": "dentist's window",
+      "type": "concept"
+    },
+    "n_e0900802": {
+      "id": "n_e0900802",
+      "label": "playing dead",
+      "type": "concept"
+    },
+    "n_9db8b146": {
+      "id": "n_9db8b146",
+      "label": "dentist flushes Nemo down the toilet and into the ocean",
+      "type": "concept"
+    },
+    "n_39f0b8b8": {
+      "id": "n_39f0b8b8",
+      "label": "Nemo floating motionless",
+      "type": "concept"
+    },
+    "n_2957f20e": {
+      "id": "n_2957f20e",
+      "label": "Nemo is dead",
+      "type": "concept"
+    },
+    "n_d77ea725": {
+      "id": "n_d77ea725",
+      "label": "home alone",
+      "type": "concept"
+    },
+    "n_9e2293ae": {
+      "id": "n_9e2293ae",
+      "label": "When I look at you, I'm home. Please don't go. I remember things better with you. I do.",
+      "type": "concept"
+    },
+    "n_3bd4ef0f": {
+      "id": "n_3bd4ef0f",
+      "label": "dentist's tray",
+      "type": "concept"
+    },
+    "n_7c5d7031": {
+      "id": "n_7c5d7031",
+      "label": "spit sink",
+      "type": "concept"
+    },
+    "n_f9cdf891": {
+      "id": "n_f9cdf891",
+      "label": "pipes",
+      "type": "concept"
+    },
+    "n_57330e37": {
+      "id": "n_57330e37",
+      "label": "Dory's memory of P. Sherman, 42 Wallaby Way, Sydney",
+      "type": "concept"
+    },
+    "n_1f1d8d23": {
+      "id": "n_1f1d8d23",
+      "label": "everything",
+      "type": "concept"
+    },
+    "n_c5db72ca": {
+      "id": "n_c5db72ca",
+      "label": "little clownfish is Nemo",
+      "type": "concept"
+    },
+    "n_99e90511": {
+      "id": "n_99e90511",
+      "label": "reunion",
+      "type": "concept"
+    },
+    "n_7d25ea83": {
+      "id": "n_7d25ea83",
+      "label": "massive fishing net",
+      "type": "concept"
+    },
+    "n_33fd5e41": {
+      "id": "n_33fd5e41",
+      "label": "school of grouper fish",
+      "type": "concept"
+    },
+    "n_bee94a27": {
+      "id": "n_bee94a27",
+      "label": "surface",
+      "type": "concept"
+    },
+    "n_5f25ea60": {
+      "id": "n_5f25ea60",
+      "label": "helping Dory",
+      "type": "concept"
+    },
+    "n_481c1ff2": {
+      "id": "n_481c1ff2",
+      "label": "Marlin's instinct",
+      "type": "concept"
+    },
+    "n_177726ee": {
+      "id": "n_177726ee",
+      "label": "holding Nemo back",
+      "type": "concept"
+    },
+    "n_fc94c5fd": {
+      "id": "n_fc94c5fd",
+      "label": "protecting him",
+      "type": "concept"
+    },
+    "n_08204d2c": {
+      "id": "n_08204d2c",
+      "label": "the net",
+      "type": "concept"
+    },
+    "n_47898f2c": {
+      "id": "n_47898f2c",
+      "label": "the fish",
+      "type": "concept"
+    },
+    "n_8da39686": {
+      "id": "n_8da39686",
+      "label": "swim down together",
+      "type": "concept"
+    },
+    "n_83656e25": {
+      "id": "n_83656e25",
+      "label": "Hundreds of fish",
+      "type": "concept"
+    },
+    "n_54acb410": {
+      "id": "n_54acb410",
+      "label": "downward in unison",
+      "type": "concept"
+    },
+    "n_e1a5b9fa": {
+      "id": "n_e1a5b9fa",
+      "label": "Hundreds of fish swimming downward in unison",
+      "type": "concept"
+    },
+    "n_bd56edc9": {
+      "id": "n_bd56edc9",
+      "label": "the trawler",
+      "type": "concept"
+    },
+    "n_5910b713": {
+      "id": "n_5910b713",
+      "label": "the net breaking free from the trawler",
+      "type": "concept"
+    },
+    "n_20b72072": {
+      "id": "n_20b72072",
+      "label": "lying still in the settling debris",
+      "type": "concept"
+    },
+    "n_3f020f99": {
+      "id": "n_3f020f99",
+      "label": "the worst",
+      "type": "concept"
+    },
+    "n_c2cd5cfa": {
+      "id": "n_c2cd5cfa",
+      "label": "fine",
+      "type": "concept"
+    },
+    "n_167e5575": {
+      "id": "n_167e5575",
+      "label": "each other",
+      "type": "concept"
+    },
+    "n_4118ad3a": {
+      "id": "n_4118ad3a",
+      "label": "life",
+      "type": "concept"
+    },
+    "n_7d137a11": {
+      "id": "n_7d137a11",
+      "label": "changed",
+      "type": "concept"
+    },
+    "n_0555c0c6": {
+      "id": "n_0555c0c6",
+      "label": "a neighborhood celebrity",
+      "type": "concept"
+    },
+    "n_e42f52f9": {
+      "id": "n_e42f52f9",
+      "label": "Marlin's incredible journey",
+      "type": "concept"
+    },
+    "n_3a898ff5": {
+      "id": "n_3a898ff5",
+      "label": "trust",
+      "type": "concept"
+    },
+    "n_eb1f8332": {
+      "id": "n_eb1f8332",
+      "label": "their close companion",
+      "type": "concept"
+    },
+    "n_096941a9": {
+      "id": "n_096941a9",
+      "label": "neighbor",
+      "type": "concept"
+    },
+    "n_21f5c5b0": {
+      "id": "n_21f5c5b0",
+      "label": "Mr. Ray the teacher",
+      "type": "concept"
+    },
+    "n_29a7fd64": {
+      "id": "n_29a7fd64",
+      "label": "the kids",
+      "type": "concept"
+    },
+    "n_6ff8b84c": {
+      "id": "n_6ff8b84c",
+      "label": "goodbye with a smile instead of fear",
+      "type": "concept"
+    },
+    "n_a7ba04a1": {
+      "id": "n_a7ba04a1",
+      "label": "the Tank Gang",
+      "type": "concept"
+    },
+    "n_5379aa71": {
+      "id": "n_5379aa71",
+      "label": "their plastic bags",
+      "type": "concept"
+    },
+    "n_f69c4f6a": {
+      "id": "n_f69c4f6a",
+      "label": "in the water triumphantly",
+      "type": "concept"
+    },
+    "n_4de1b001": {
+      "id": "n_4de1b001",
+      "label": "escaped",
+      "type": "concept"
+    },
+    "n_00282509": {
+      "id": "n_00282509",
+      "label": "Marlin's arc",
+      "type": "concept"
+    },
+    "n_458d5bf4": {
+      "id": "n_458d5bf4",
+      "label": "learning that he cannot protect Nemo from every danger",
+      "type": "concept"
+    },
+    "n_f932cfb5": {
+      "id": "n_f932cfb5",
+      "label": "trying to protect Nemo from every danger",
+      "type": "concept"
+    },
+    "n_cf6ca9b0": {
+      "id": "n_cf6ca9b0",
+      "label": "Nemo back",
+      "type": "concept"
+    },
+    "n_86906c6c": {
+      "id": "n_86906c6c",
+      "label": "True love",
+      "type": "concept"
+    },
+    "n_2a5644cc": {
+      "id": "n_2a5644cc",
+      "label": "trusting those you love to face the world",
+      "type": "concept"
+    },
+    "n_fff89103": {
+      "id": "n_fff89103",
+      "label": "Marlin's journey",
+      "type": "concept"
+    },
+    "n_deea26f6": {
+      "id": "n_deea26f6",
+      "label": "Marlin confronting every terror the ocean holds",
+      "type": "concept"
+    },
+    "n_2d3fd989": {
+      "id": "n_2d3fd989",
+      "label": "Marlin's own courage",
+      "type": "concept"
+    },
+    "n_403fe77d": {
+      "id": "n_403fe77d",
+      "label": "Nemo's lucky fin",
+      "type": "concept"
+    },
+    "n_3955624e": {
+      "id": "n_3955624e",
+      "label": "Dory's memory loss",
+      "type": "concept"
+    },
+    "n_7e4bcba5": {
+      "id": "n_7e4bcba5",
+      "label": "challenges",
+      "type": "concept"
+    },
+    "n_c923932b": {
+      "id": "n_c923932b",
+      "label": "limitations",
+      "type": "concept"
+    },
+    "n_cce4fcb9": {
+      "id": "n_cce4fcb9",
+      "label": "Both characters",
+      "type": "concept"
+    },
+    "n_358e7b71": {
+      "id": "n_358e7b71",
+      "label": "their conditions do not define their worth or abilities",
+      "type": "concept"
+    },
+    "n_76feb931": {
+      "id": "n_76feb931",
+      "label": "Nemo's fin",
+      "type": "concept"
+    },
+    "n_5ec043e6": {
+      "id": "n_5ec043e6",
+      "label": "Nemo being brave",
+      "type": "concept"
+    },
+    "n_50af3f7b": {
+      "id": "n_50af3f7b",
+      "label": "Dory being the most loyal and emotionally intelligent character in the film",
+      "type": "concept"
+    },
+    "n_c3b7334d": {
+      "id": "n_c3b7334d",
+      "label": "his journey alone",
+      "type": "concept"
+    },
+    "n_d2b4f9cd": {
+      "id": "n_d2b4f9cd",
+      "label": "every step of Marlin's journey",
+      "type": "concept"
+    },
+    "n_0a791b31": {
+      "id": "n_0a791b31",
+      "label": "the moonfish",
+      "type": "concept"
+    },
+    "n_e87b79c3": {
+      "id": "n_e87b79c3",
+      "label": "the Tank Gang's solidarity",
+      "type": "concept"
+    },
+    "n_8f96f093": {
+      "id": "n_8f96f093",
+      "label": "Marlin and Nemo",
+      "type": "concept"
+    },
+    "n_7df5c681": {
+      "id": "n_7df5c681",
+      "label": "Crush's relaxed approach",
+      "type": "concept"
+    },
+    "n_7f706bec": {
+      "id": "n_7f706bec",
+      "label": "letting Squirt learn from experience",
+      "type": "concept"
+    },
+    "n_26ad200a": {
+      "id": "n_26ad200a",
+      "label": "children given room to fail and try again",
+      "type": "concept"
+    },
+    "n_4535f36e": {
+      "id": "n_4535f36e",
+      "label": "children grow stronger",
+      "type": "concept"
+    },
+    "n_5de07b1f": {
+      "id": "n_5de07b1f",
+      "label": "Dory's philosophy of \"just keep swimming\"",
+      "type": "concept"
+    },
+    "n_1fdfc92b": {
+      "id": "n_1fdfc92b",
+      "label": "the film's emotional backbone",
+      "type": "concept"
+    },
+    "n_8257d23c": {
+      "id": "n_8257d23c",
+      "label": "continuing forward when everything seems lost",
+      "type": "concept"
+    },
+    "n_3fa9ca56": {
+      "id": "n_3fa9ca56",
+      "label": "them",
+      "type": "concept"
+    },
+    "n_0171bf64": {
+      "id": "n_0171bf64",
+      "label": "\"Just keep swimming, just keep swimming, just keep swimming, swimming, swimming.\"",
+      "type": "concept"
+    },
+    "n_08049e7b": {
+      "id": "n_08049e7b",
+      "label": "\"I look at you, and I... and I'm home. Please. I don't want that to go away. I don't want to forget.\"",
+      "type": "concept"
+    },
+    "n_346fe702": {
+      "id": "n_346fe702",
+      "label": "\"Fish are friends, not food.\"",
+      "type": "concept"
+    },
+    "n_003425ae": {
+      "id": "n_003425ae",
+      "label": "\"P. Sherman, 42 Wallaby Way, Sydney!\"",
+      "type": "concept"
+    },
+    "n_1381c8ef": {
+      "id": "n_1381c8ef",
+      "label": "\"You think you can do these things, but you just can't, Nemo!\"",
+      "type": "concept"
+    },
+    "n_528b512f": {
+      "id": "n_528b512f",
+      "label": "\"The sea is not safe, and I promised I'd never let anything happen to him.\"",
+      "type": "concept"
+    },
+    "n_ad4e5c02": {
+      "id": "n_ad4e5c02",
+      "label": "\"That's a funny thing to promise... if nothing ever happened to him, then nothing would ever happen to him.\"",
+      "type": "concept"
+    },
+    "n_44ebbaf3": {
+      "id": "n_44ebbaf3",
+      "label": "\"When they know, you know, you know?\"",
+      "type": "concept"
+    },
+    "n_2a2cd88e": {
+      "id": "n_2a2cd88e",
+      "label": "\"You got serious thrill issues, dude.\"",
+      "type": "concept"
+    },
+    "n_cf17a8c5": {
+      "id": "n_cf17a8c5",
+      "label": "\"It's like he's trying to speak to me! He's saying something!\"",
+      "type": "concept"
+    },
+    "n_fc9d640c": {
+      "id": "n_fc9d640c",
+      "label": "\"Okay, don't make any sudden moves. Hop inside my mouth if you want to live.\"",
+      "type": "concept"
+    },
+    "n_90339071": {
+      "id": "n_90339071",
+      "label": "\"All drains lead to the ocean.\"",
+      "type": "concept"
+    },
+    "n_d9efb7b9": {
+      "id": "n_d9efb7b9",
+      "label": "Thomas Newman",
+      "type": "concept"
+    },
+    "n_ecdb08cb": {
+      "id": "n_ecdb08cb",
+      "label": "Thomas Newman's score",
+      "type": "concept"
+    },
+    "n_3c1839a9": {
+      "id": "n_3c1839a9",
+      "label": "atmospheric",
+      "type": "concept"
+    },
+    "n_2783b800": {
+      "id": "n_2783b800",
+      "label": "shimmering",
+      "type": "concept"
+    },
+    "n_eeb2f2e4": {
+      "id": "n_eeb2f2e4",
+      "label": "unconventional instruments",
+      "type": "concept"
+    },
+    "n_1bb57752": {
+      "id": "n_1bb57752",
+      "label": "ambient textures",
+      "type": "concept"
+    },
+    "n_69345c00": {
+      "id": "n_69345c00",
+      "label": "the vast, mysterious world beneath the waves",
+      "type": "concept"
+    },
+    "n_92e1b459": {
+      "id": "n_92e1b459",
+      "label": "Academy Award for Best Original Score",
+      "type": "concept"
+    },
+    "n_83c54cf4": {
+      "id": "n_83c54cf4",
+      "label": "\"Beyond the Sea\"",
+      "type": "concept"
+    },
+    "n_f4300b7f": {
+      "id": "n_f4300b7f",
+      "label": "Robbie Williams",
+      "type": "concept"
+    },
+    "n_760dea3f": {
+      "id": "n_760dea3f",
+      "label": "the end credits",
+      "type": "concept"
+    },
+    "n_67f5e954": {
+      "id": "n_67f5e954",
+      "label": "the film's oceanic adventure",
+      "type": "concept"
+    },
+    "n_a0e71982": {
+      "id": "n_a0e71982",
+      "label": "Academy Award for Best Animated Feature",
+      "type": "concept"
+    },
+    "n_a4db92c0": {
+      "id": "n_a4db92c0",
+      "label": "2004",
+      "type": "concept"
+    },
+    "n_fba60051": {
+      "id": "n_fba60051",
+      "label": "Best Original Screenplay",
+      "type": "concept"
+    },
+    "n_eaeb9265": {
+      "id": "n_eaeb9265",
+      "label": "Best Original Score",
+      "type": "concept"
+    },
+    "n_7406e857": {
+      "id": "n_7406e857",
+      "label": "Best Sound Editing",
+      "type": "concept"
+    },
+    "n_2c03dec2": {
+      "id": "n_2c03dec2",
+      "label": "highest-grossing animated film ever",
+      "type": "concept"
+    },
+    "n_4d15585f": {
+      "id": "n_4d15585f",
+      "label": "99% approval rating on Rotten Tomatoes",
+      "type": "concept"
+    },
+    "n_63ca1c7a": {
+      "id": "n_63ca1c7a",
+      "label": "National Film Registry",
+      "type": "concept"
+    },
+    "n_e3653a42": {
+      "id": "n_e3653a42",
+      "label": "Library of Congress",
+      "type": "concept"
+    },
+    "n_ac417643": {
+      "id": "n_ac417643",
+      "label": "2021",
+      "type": "concept"
+    },
+    "n_11761692": {
+      "id": "n_11761692",
+      "label": "the film",
+      "type": "concept"
+    },
+    "n_3171e3b9": {
+      "id": "n_3171e3b9",
+      "label": "a trip to an aquarium with his son",
+      "type": "concept"
+    },
+    "n_491ecdd0": {
+      "id": "n_491ecdd0",
+      "label": "Andrew Stanton realizing he was so worried about the boy's safety",
+      "type": "concept"
+    },
+    "n_d7107dec": {
+      "id": "n_d7107dec",
+      "label": "he wasn't letting either of them enjoy the experience",
+      "type": "concept"
+    },
+    "n_bfcc7244": {
+      "id": "n_bfcc7244",
+      "label": "the Pixar team",
+      "type": "concept"
+    },
+    "n_3aa707e8": {
+      "id": "n_3aa707e8",
+      "label": "scuba diving lessons",
+      "type": "concept"
+    },
+    "n_2e07e0b0": {
+      "id": "n_2e07e0b0",
+      "label": "marine biology courses",
+      "type": "concept"
+    },
+    "n_a1cb5a5c": {
+      "id": "n_a1cb5a5c",
+      "label": "oceanography",
+      "type": "concept"
+    },
+    "n_f8f651ea": {
+      "id": "n_f8f651ea",
+      "label": "underwater environments accurately",
+      "type": "concept"
+    },
+    "n_166bce18": {
+      "id": "n_166bce18",
+      "label": "entirely new technology",
+      "type": "concept"
+    },
+    "n_3c36c02e": {
+      "id": "n_3c36c02e",
+      "label": "rendering water",
+      "type": "concept"
+    },
+    "n_49b32282": {
+      "id": "n_49b32282",
+      "label": "light refraction",
+      "type": "concept"
+    },
+    "n_7b073e99": {
+      "id": "n_7b073e99",
+      "label": "the movement of aquatic life",
+      "type": "concept"
+    },
+    "n_efdb4208": {
+      "id": "n_efdb4208",
+      "label": "the underwater environments in the film",
+      "type": "concept"
+    },
+    "n_360d744e": {
+      "id": "n_360d744e",
+      "label": "a massive leap forward in animation technology",
+      "type": "concept"
+    },
+    "n_c7b460ad": {
+      "id": "n_c7b460ad",
+      "label": "the film's release",
+      "type": "concept"
+    },
+    "n_4c656895": {
+      "id": "n_4c656895",
+      "label": "clownfish sales",
+      "type": "concept"
+    },
+    "n_c324f63e": {
+      "id": "n_c324f63e",
+      "label": "surging clownfish sales worldwide",
+      "type": "concept"
+    },
+    "n_53d0429d": {
+      "id": "n_53d0429d",
+      "label": "marine biologists",
+      "type": "concept"
+    },
+    "n_def50ddf": {
+      "id": "n_def50ddf",
+      "label": "wild populations being captured for aquariums",
+      "type": "concept"
+    },
+    "n_d5b81fa1": {
+      "id": "n_d5b81fa1",
+      "label": "an ironic outcome for a film about setting a captive fish free",
+      "type": "concept"
+    },
+    "n_42117607": {
+      "id": "n_42117607",
+      "label": "one of Pixar's greatest masterpieces",
+      "type": "concept"
+    },
+    "n_4ab03d37": {
+      "id": "n_4ab03d37",
+      "label": "one of the finest animated films ever made",
+      "type": "concept"
+    },
+    "n_7d9b1452": {
+      "id": "n_7d9b1452",
+      "label": "the box office in 2003",
+      "type": "concept"
+    },
+    "n_0004168a": {
+      "id": "n_0004168a",
+      "label": "a cultural phenomenon",
+      "type": "concept"
+    },
+    "n_5900bfec": {
+      "id": "n_5900bfec",
+      "label": "Dory's phrase \"just keep swimming\"",
+      "type": "concept"
+    },
+    "n_caf16d61": {
+      "id": "n_caf16d61",
+      "label": "the popular lexicon",
+      "type": "concept"
+    },
+    "n_40dccf24": {
+      "id": "n_40dccf24",
+      "label": "Finding Dory",
+      "type": "concept"
+    },
+    "n_7f31e88a": {
+      "id": "n_7f31e88a",
+      "label": "2016",
+      "type": "concept"
+    },
+    "n_5d6c18a1": {
+      "id": "n_5d6c18a1",
+      "label": "Dory searching for her own parents",
+      "type": "concept"
+    },
+    "n_303e8527": {
+      "id": "n_303e8527",
+      "label": "Dory's backstory",
+      "type": "concept"
+    },
+    "n_b57d9f6a": {
+      "id": "n_b57d9f6a",
+      "label": "the same emotional depth",
+      "type": "concept"
+    },
+    "n_8e385409": {
+      "id": "n_8e385409",
+      "label": "over $1 billion worldwide",
+      "type": "concept"
+    },
+    "n_16fe71ae": {
+      "id": "n_16fe71ae",
+      "label": "The Seas with Nemo & Friends",
+      "type": "concept"
+    },
+    "n_d4dd82d1": {
+      "id": "n_d4dd82d1",
+      "label": "Turtle Talk with Crush",
+      "type": "concept"
+    },
+    "n_37727097": {
+      "id": "n_37727097",
+      "label": "EPCOT in Walt Disney World",
+      "type": "concept"
+    },
+    "n_bdff84a9": {
+      "id": "n_bdff84a9",
+      "label": "an interactive show featuring real-time animation",
+      "type": "concept"
+    },
+    "n_015fbad3": {
+      "id": "n_015fbad3",
+      "label": "its story is universal",
+      "type": "concept"
+    },
+    "n_034aa9cf": {
+      "id": "n_034aa9cf",
+      "label": "its story",
+      "type": "concept"
+    },
+    "n_d62f621c": {
+      "id": "n_d62f621c",
+      "label": "a parent's love",
+      "type": "concept"
+    },
+    "n_dca96d94": {
+      "id": "n_dca96d94",
+      "label": "a child's need for independence",
+      "type": "concept"
+    },
+    "n_41511b96": {
+      "id": "n_41511b96",
+      "label": "the courage it takes to let go",
+      "type": "concept"
+    },
+    "n_e602a4f9": {
+      "id": "n_e602a4f9",
+      "label": "dazzling ocean visuals",
+      "type": "concept"
+    },
+    "n_b75422a5": {
+      "id": "n_b75422a5",
+      "label": "sharp humor",
+      "type": "concept"
+    },
+    "n_f0dcafeb": {
+      "id": "n_f0dcafeb",
+      "label": "one of cinema's most poignant meditations on fear, loss, and the bravery of simply moving forward",
+      "type": "concept"
+    }
+  },
+  "hyperedges": [
+    {
+      "id": "e_184c1cc9",
+      "label": "has_release_year",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "2003"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_0e668834",
+      "label": "produced_by",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Pixar Animation Studios",
+        "Walt Disney Pictures"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_637e89b6",
+      "label": "directed_by",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Andrew Stanton"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9ce09fb2",
+      "label": "co_directed_by",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Lee Unkrich"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9e8065dc",
+      "label": "written_by",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Andrew Stanton",
+        "Bob Peterson",
+        "David Reynolds"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e1fc58c4",
+      "label": "has_release_date",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "May 30, 2003"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_96ff31c8",
+      "label": "has_genre",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Animated Comedy-Adventure"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_7cc5c35d",
+      "label": "has_runtime",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "100 minutes"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_68164468",
+      "label": "has_box_office",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "$940.3 million worldwide"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c00628cb",
+      "label": "is_father_of",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5b8f97dc",
+      "label": "is_spouse_of",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Coral"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_68edc25e",
+      "label": "is_son_of",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_81b12ef6",
+      "label": "is_consumed_by",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "fear",
+        "anxiety"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_31f2e869",
+      "label": "smothers_with",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo",
+        "rules",
+        "caution"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4bb46333",
+      "label": "has_trait",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "smaller right fin",
+        "lucky fin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e8344e7c",
+      "label": "has_trait",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "brave",
+        "curious",
+        "eager to prove himself"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_38a9a3fa",
+      "label": "is_species",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "regal blue tang"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_35b870b7",
+      "label": "has_condition",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "severe short-term memory loss"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9ae16381",
+      "label": "has_trait",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "optimistic",
+        "kind",
+        "brave"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_0da04df9",
+      "label": "becomes_companion_on",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Marlin",
+        "journey across the ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c1cd8a0b",
+      "label": "is_species",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Moorish idol"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_ad52081c",
+      "label": "leads",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Tank Gang"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_181a9c30",
+      "label": "has_backstory",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "scarred from a failed escape attempt"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_82284f20",
+      "label": "seeks_to_reach",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "the ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e6946eca",
+      "label": "helps_find",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Nemo",
+        "courage to escape"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5525d398",
+      "label": "is_species",
+      "source": [
+        "Bruce"
+      ],
+      "target": [
+        "great white shark"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_253dc1cf",
+      "label": "tries_to_be",
+      "source": [
+        "Bruce"
+      ],
+      "target": [
+        "being vegetarian"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_73d438e8",
+      "label": "leads",
+      "source": [
+        "Bruce"
+      ],
+      "target": [
+        "Fish-Friendly Sharks support group"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_dc619171",
+      "label": "has_motto",
+      "source": [
+        "Bruce"
+      ],
+      "target": [
+        "Fish are friends, not food."
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d8cddd9f",
+      "label": "is_described_as",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "150-year-old green sea turtle"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d66b6074",
+      "label": "rides",
+      "source": [
+        "Crush",
+        "Squirt"
+      ],
+      "target": [
+        "East Australian Current (EAC)"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_70f9a16c",
+      "label": "is_father_of",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "Squirt"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_21363b04",
+      "label": "teaches",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "Marlin",
+        "letting go",
+        "trusting his child"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_83fb40e0",
+      "label": "is_son_of",
+      "source": [
+        "Squirt"
+      ],
+      "target": [
+        "Crush"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_36291cd5",
+      "label": "has_trait",
+      "source": [
+        "Squirt"
+      ],
+      "target": [
+        "adventurous",
+        "fearless"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_f9ea4564",
+      "label": "shows",
+      "source": [
+        "Squirt"
+      ],
+      "target": [
+        "Marlin",
+        "what a confident child looks like when given freedom"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2cc3c73d",
+      "label": "is_species",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "brown pelican"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b32d8248",
+      "label": "knows_through",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "Marlin's story"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_6e47e3f5",
+      "label": "helps_reunite",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "Marlin",
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e46ef097",
+      "label": "is",
+      "source": [
+        "P. Sherman",
+        "Philip Sherman"
+      ],
+      "target": [
+        "scuba-diving dentist"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5cd3ab7b",
+      "label": "is_located_in",
+      "source": [
+        "P. Sherman",
+        "Philip Sherman"
+      ],
+      "target": [
+        "Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bbfc9aa1",
+      "label": "has_office_feature",
+      "source": [
+        "P. Sherman",
+        "Philip Sherman"
+      ],
+      "target": [
+        "office overlooking the harbor"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d3287a4b",
+      "label": "captures_from_the_reef",
+      "source": [
+        "P. Sherman",
+        "Philip Sherman"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e6f5d2f0",
+      "label": "is_niece_of",
+      "source": [
+        "Darla"
+      ],
+      "target": [
+        "P. Sherman",
+        "Philip Sherman"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_ce717aa5",
+      "label": "is_notorious_for",
+      "source": [
+        "Darla"
+      ],
+      "target": [
+        "shaking a previous fish to death"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_55ddcca0",
+      "label": "is_meant_to_be_birthday_present_for",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "Darla"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_80abbbaa",
+      "label": "is_species",
+      "source": [
+        "Bloat"
+      ],
+      "target": [
+        "porcupine pufferfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_09a9a986",
+      "label": "has_trait",
+      "source": [
+        "Bloat"
+      ],
+      "target": [
+        "a temper"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_1a6aed65",
+      "label": "is_species",
+      "source": [
+        "Peach"
+      ],
+      "target": [
+        "starfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_1e83121f",
+      "label": "is_stuck_to",
+      "source": [
+        "Peach"
+      ],
+      "target": [
+        "tank glass"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2028a09f",
+      "label": "serves_as",
+      "source": [
+        "Peach"
+      ],
+      "target": [
+        "lookout"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d1f93a5f",
+      "label": "is_species",
+      "source": [
+        "Jacques"
+      ],
+      "target": [
+        "cleaner shrimp"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_40101229",
+      "label": "is_obsessed_with",
+      "source": [
+        "Jacques"
+      ],
+      "target": [
+        "cleanliness"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_78fcfbec",
+      "label": "is_species",
+      "source": [
+        "Gurgle"
+      ],
+      "target": [
+        "royal gramma"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9b4be677",
+      "label": "is_terrified_of",
+      "source": [
+        "Gurgle"
+      ],
+      "target": [
+        "germs"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c791a7ea",
+      "label": "is_species",
+      "source": [
+        "Deb"
+      ],
+      "target": [
+        "four-striped damselfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_a9453abd",
+      "label": "believes_reflection_is_twin_sister",
+      "source": [
+        "Deb"
+      ],
+      "target": [
+        "Flo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_907e328d",
+      "label": "is_species",
+      "source": [
+        "Bubbles"
+      ],
+      "target": [
+        "yellow tang"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_98b2b04a",
+      "label": "is_obsessed_with",
+      "source": [
+        "Bubbles"
+      ],
+      "target": [
+        "bubbles"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b55b916b",
+      "label": "admire",
+      "source": [
+        "Marlin",
+        "Coral"
+      ],
+      "target": [
+        "clutch of over 400 eggs",
+        "anemone home",
+        "Great Barrier Reef"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e74f6cde",
+      "label": "attacks",
+      "source": [
+        "barracuda"
+      ],
+      "target": [
+        "Marlin",
+        "Coral",
+        "eggs"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_8c53c270",
+      "label": "knocks_unconscious",
+      "source": [
+        "barracuda attack"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_caf14132",
+      "label": "finds_gone_after_attack",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Coral",
+        "nearly every egg"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b1e1da1e",
+      "label": "is_named_as",
+      "source": [
+        "one tiny, damaged egg"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_ec61377d",
+      "label": "had_loved_name",
+      "source": [
+        "Coral"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4494ea2f",
+      "label": "vows_to_protect",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_f24a9d58",
+      "label": "starts",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "first day of school"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_a5552b26",
+      "label": "rattles_off",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "dangers",
+        "warnings"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_1105f736",
+      "label": "overprotects",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_28e465fa",
+      "label": "meets_at_school_drop_off",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "other young fish",
+        "their more relaxed parents"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_8275fdb6",
+      "label": "takes_field_trip_to",
+      "source": [
+        "Nemo",
+        "classmates"
+      ],
+      "target": [
+        "Drop-Off"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4b5b1174",
+      "label": "is",
+      "source": [
+        "Drop-Off"
+      ],
+      "target": [
+        "the wall where the reef ends and the open ocean begins"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4e1fddc0",
+      "label": "is_dared_to_swim_to",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "boat anchored in the deep water"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_3c8acdc6",
+      "label": "touches",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "boat"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c96ff318",
+      "label": "is_motivated_by",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "proving he's capable"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d5ed8e27",
+      "label": "scoops_into_bag",
+      "source": [
+        "P. Sherman",
+        "scuba diver"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_0a8c17e7",
+      "label": "takes_away",
+      "source": [
+        "P. Sherman",
+        "scuba diver"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_8338efab",
+      "label": "chases",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "boat"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c87b6756",
+      "label": "catches_glimpse_of",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "diver's mask"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_51ae7653",
+      "label": "has_address_written",
+      "source": [
+        "diver's mask"
+      ],
+      "target": [
+        "P. Sherman, 42 Wallaby Way, Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_68bc0964",
+      "label": "races_into",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "open ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_33bf6f17",
+      "label": "collides_with",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d6d449b0",
+      "label": "claims_to_know",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "which way the boat went"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_953f1042",
+      "label": "causes",
+      "source": [
+        "Dory's short-term memory loss"
+      ],
+      "target": [
+        "forgets things almost as quickly as she learns them"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4482f351",
+      "label": "becomes_partner_on",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Marlin",
+        "journey"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9bb56820",
+      "label": "complements",
+      "source": [
+        "Dory's optimism",
+        "Dory's fearlessness"
+      ],
+      "target": [
+        "Marlin's anxiety",
+        "Marlin's caution"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_269e04ff",
+      "label": "encounters",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "Bruce",
+        "Anchor",
+        "Chum"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_33f15c2a",
+      "label": "is_species",
+      "source": [
+        "Anchor"
+      ],
+      "target": [
+        "hammerhead"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b9cf33a8",
+      "label": "is_species",
+      "source": [
+        "Chum"
+      ],
+      "target": [
+        "mako"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_a8ee8601",
+      "label": "runs",
+      "source": [
+        "Bruce",
+        "Anchor",
+        "Chum"
+      ],
+      "target": [
+        "support group to stop eating fish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9d48ab50",
+      "label": "finds",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "diver's mask"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_dffa0e44",
+      "label": "sends_into_feeding_frenzy",
+      "source": [
+        "drop of blood from Dory's nose"
+      ],
+      "target": [
+        "Bruce"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_66b331bb",
+      "label": "barely_escape",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "Bruce"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2924619b",
+      "label": "detonates",
+      "source": [
+        "torpedo from a sunken submarine"
+      ],
+      "target": [
+        "old naval mines"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_7951bb7e",
+      "label": "travels_into",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "deep ocean trench"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2dd56b33",
+      "label": "lures_by_light",
+      "source": [
+        "monstrous anglerfish"
+      ],
+      "target": [
+        "Marlin",
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bfe0ad66",
+      "label": "can_do",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "reading"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_866e4443",
+      "label": "deciphers_from_mask",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "P. Sherman, 42 Wallaby Way, Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c4c76154",
+      "label": "becomes_anchor_phrase_for",
+      "source": [
+        "P. Sherman, 42 Wallaby Way, Sydney"
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2fd7db30",
+      "label": "gives",
+      "source": [
+        "school of moonfish"
+      ],
+      "target": [
+        "Marlin",
+        "Dory",
+        "directions"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e4ff758e",
+      "label": "warns",
+      "source": [
+        "school of moonfish"
+      ],
+      "target": [
+        "not to swim through the trench",
+        "to swim over it instead"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_6063f861",
+      "label": "ignores",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "advice from school of moonfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bbde4b28",
+      "label": "swims_through",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "trench"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_711e8836",
+      "label": "encounters",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "forest of jellyfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_0b6c2296",
+      "label": "treats_like_a_game",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "jellyfish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_78126bb9",
+      "label": "badly_stings",
+      "source": [
+        "jellyfish"
+      ],
+      "target": [
+        "Marlin",
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_90d49b44",
+      "label": "carries_out_of_jellyfish_forest",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_19d3a5e6",
+      "label": "loses",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "consciousness"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_3d4a75ae",
+      "label": "wake_up_riding",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "East Australian Current (EAC)"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_888f5f6b",
+      "label": "rides_on_back_of",
+      "source": [
+        "Marlin",
+        "Dory"
+      ],
+      "target": [
+        "Crush"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_cebaa3b4",
+      "label": "shows",
+      "source": [
+        "Crush",
+        "Squirt"
+      ],
+      "target": [
+        "Marlin",
+        "different philosophy of parenting"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d679d0e6",
+      "label": "tumbles_out_of",
+      "source": [
+        "Squirt"
+      ],
+      "target": [
+        "current"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_68c0d4e4",
+      "label": "resists",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "urge to intervene"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5b0f5018",
+      "label": "lets_find",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "Squirt",
+        "his own way back"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_3120946d",
+      "label": "influences_turning_point_for",
+      "source": [
+        "Crush"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_146c307d",
+      "label": "begins_to_understand",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "protecting Nemo from everything isn't the same as being a good father"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_082c1aba",
+      "label": "tells",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "story of his quest"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_04c058f1",
+      "label": "passes_through",
+      "source": [
+        "story of Marlin's quest"
+      ],
+      "target": [
+        "turtle",
+        "sea horse",
+        "dolphin",
+        "pelican"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bc514d0e",
+      "label": "spreads_across",
+      "source": [
+        "story of Marlin's quest"
+      ],
+      "target": [
+        "entire ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_95d24fda",
+      "label": "eventually_reaches",
+      "source": [
+        "story of Marlin's quest"
+      ],
+      "target": [
+        "Nigel"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_e0c9e131",
+      "label": "frequents",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "dentist's office window"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_950ec1e6",
+      "label": "swallows",
+      "source": [
+        "blue whale"
+      ],
+      "target": [
+        "Marlin",
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b32cc394",
+      "label": "claims_can_do",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "speaking whale"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_af55f5b9",
+      "label": "tells",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Marlin",
+        "the whale is telling them to let go"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_2c76f6e8",
+      "label": "finally_accepts",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "letting go"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4d471b3b",
+      "label": "blows_out_through_blowhole_into",
+      "source": [
+        "blue whale"
+      ],
+      "target": [
+        "Marlin",
+        "Dory",
+        "Sydney Harbour"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_71f02cc7",
+      "label": "finds_himself_in",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "fish tank in P. Sherman's dental office at 42 Wallaby Way, Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4a8f3348",
+      "label": "overlooks",
+      "source": [
+        "fish tank in P. Sherman's dental office at 42 Wallaby Way, Sydney"
+      ],
+      "target": [
+        "harbour"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bc8db479",
+      "label": "meets",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "Tank Gang"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_fed51ebc",
+      "label": "dreams_of",
+      "source": [
+        "Tank Gang"
+      ],
+      "target": [
+        "freedom"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5baf0af6",
+      "label": "was_taken_from",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_cb65c8d0",
+      "label": "sees_himself_in",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_932a48b1",
+      "label": "devises",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "escape plan"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_85db96aa",
+      "label": "must_do_in_plan",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "jam the tank's filter with a pebble"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_eda0bc70",
+      "label": "forces",
+      "source": [
+        "jam the tank's filter with a pebble"
+      ],
+      "target": [
+        "dentist removes fish and puts them in plastic bags to clean the tank"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_49d407b8",
+      "label": "are_planned_to_move_through",
+      "source": [
+        "fish in plastic bags"
+      ],
+      "target": [
+        "roll off the counter",
+        "out the window",
+        "across the road",
+        "into the harbour"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_254461d1",
+      "label": "results_in",
+      "source": [
+        "Nemo's first attempt"
+      ],
+      "target": [
+        "failure"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_40e95da8",
+      "label": "nearly_kills",
+      "source": [
+        "filter"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4bbec579",
+      "label": "is_wracked_with",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "guilt"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_414a9147",
+      "label": "calls_off",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "plan"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_016be9d1",
+      "label": "arrives_with",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "window",
+        "news that Marlin has crossed the entire ocean looking for his son"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_dea43238",
+      "label": "inspires",
+      "source": [
+        "news that Marlin has crossed the entire ocean looking for his son"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_9160c96a",
+      "label": "has_faced_for_nemo",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "sharks",
+        "jellyfish",
+        "a whale"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_32de06af",
+      "label": "tries_again_and_succeeds_at",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "jamming the filter"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_f392b078",
+      "label": "undergoes",
+      "source": [
+        "filter"
+      ],
+      "target": [
+        "breakdown"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_dc1cfdb7",
+      "label": "grows",
+      "source": [
+        "tank"
+      ],
+      "target": [
+        "filthy"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_cebcf2d9",
+      "label": "installs",
+      "source": [
+        "dentist"
+      ],
+      "target": [
+        "high-tech new filter"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_97f9bba7",
+      "label": "foils",
+      "source": [
+        "high-tech new filter"
+      ],
+      "target": [
+        "escape plan"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_df74f12f",
+      "label": "arrives_for",
+      "source": [
+        "Darla"
+      ],
+      "target": [
+        "birthday"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_426c51d0",
+      "label": "is_on_day_of_darla_arrival",
+      "source": [
+        "tank"
+      ],
+      "target": [
+        "spotless"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_01c43957",
+      "label": "are",
+      "source": [
+        "fish"
+      ],
+      "target": [
+        "trapped"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b6e0570c",
+      "label": "scoops_up",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "Marlin",
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_3defe086",
+      "label": "flies_to",
+      "source": [
+        "Nigel"
+      ],
+      "target": [
+        "Marlin",
+        "Dory",
+        "dentist's window"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d2e1a34c",
+      "label": "is_about_to_give_to",
+      "source": [
+        "dentist"
+      ],
+      "target": [
+        "Nemo",
+        "Darla"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_ca672f60",
+      "label": "uses_strategy_of",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "playing dead"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_159d7be2",
+      "label": "teaches",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_f132b93e",
+      "label": "is_meant_to_cause",
+      "source": [
+        "playing dead"
+      ],
+      "target": [
+        "dentist flushes Nemo down the toilet and into the ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_420e595e",
+      "label": "sees_at_window",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo floating motionless"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c104f7d9",
+      "label": "believes",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo is dead"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_100ad6f6",
+      "label": "thanks",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_bcea3cb5",
+      "label": "says_he_has_to_go",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "home alone"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_00b5e7ce",
+      "label": "begs_to_stay",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_c3cadb26",
+      "label": "says_to_marlin",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "When I look at you, I'm home. Please don't go. I remember things better with you. I do."
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d3654a66",
+      "label": "leaves",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_20868fb7",
+      "label": "scoops_up_to_give_to_darla",
+      "source": [
+        "dentist"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_46751491",
+      "label": "launches_himself_onto",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "dentist's tray"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_28ef5418",
+      "label": "catapults_into",
+      "source": [
+        "Gill"
+      ],
+      "target": [
+        "Nemo",
+        "spit sink"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_cedbd765",
+      "label": "drains_to",
+      "source": [
+        "spit sink"
+      ],
+      "target": [
+        "ocean"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_6c956ae3",
+      "label": "slides_down_into",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "pipes",
+        "Sydney Harbour"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_5206576f",
+      "label": "encounters_in_harbour",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_4a18ee57",
+      "label": "does_not_recognize",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_131c0b7b",
+      "label": "reads_on_pipe",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_d9ac69de",
+      "label": "triggers_return_of",
+      "source": [
+        "Sydney"
+      ],
+      "target": [
+        "Dory's memory of P. Sherman, 42 Wallaby Way, Sydney"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_58479f23",
+      "label": "remembers",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "everything"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_711d9bfa",
+      "label": "realizes",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "little clownfish is Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_6cdf4e0d",
+      "label": "leads_to_find",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "Nemo",
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_75a69118",
+      "label": "catches_just_as_he_is_swimming_away",
+      "source": [
+        "Nemo",
+        "Dory"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_7279a190",
+      "label": "achieves",
+      "source": [
+        "Marlin",
+        "Nemo"
+      ],
+      "target": [
+        "reunion"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_648c1d41",
+      "label": "catches",
+      "source": [
+        "massive fishing net"
+      ],
+      "target": [
+        "Dory",
+        "school of grouper fish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_22db606d",
+      "label": "is_hauled_to",
+      "source": [
+        "massive fishing net"
+      ],
+      "target": [
+        "surface"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_b4344f69",
+      "label": "wants_to_do",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "helping Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_6edafe8b",
+      "label": "is",
+      "source": [
+        "Marlin's instinct"
+      ],
+      "target": [
+        "holding Nemo back",
+        "protecting him"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_eccb74fb",
+      "label": "lets_go_to_help",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "26b4b940250dec107c5d2c730a859c1a"
+    },
+    {
+      "id": "e_596cb38c",
+      "label": "swims_into",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "the net"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_27150d0c",
+      "label": "instructs_to",
+      "source": [
+        "Nemo",
+        "the fish"
+      ],
+      "target": [
+        "swim down together"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_09577227",
+      "label": "swim",
+      "source": [
+        "Hundreds of fish"
+      ],
+      "target": [
+        "downward in unison"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_9f190fe1",
+      "label": "breaks_free_from_trawler",
+      "source": [
+        "Hundreds of fish swimming downward in unison"
+      ],
+      "target": [
+        "the net"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_e9d8b08d",
+      "label": "breaks_free_from",
+      "source": [
+        "the net"
+      ],
+      "target": [
+        "the trawler"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5dca38de",
+      "label": "saves",
+      "source": [
+        "the net breaking free from the trawler"
+      ],
+      "target": [
+        "Dory",
+        "the fish"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f8f5c6b4",
+      "label": "finds",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5cae56f8",
+      "label": "is_found_in_state",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "lying still in the settling debris"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_2aa78f63",
+      "label": "fears",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "the worst"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_6078efee",
+      "label": "is",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "fine"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_15ca67ed",
+      "label": "embrace",
+      "source": [
+        "Marlin",
+        "Nemo"
+      ],
+      "target": [
+        "each other"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_adee6e21",
+      "label": "has_state_on_the_reef",
+      "source": [
+        "life"
+      ],
+      "target": [
+        "changed"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3eae8578",
+      "label": "becomes",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "a neighborhood celebrity"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f0862184",
+      "label": "makes_braver_and_more_relaxed",
+      "source": [
+        "Marlin's incredible journey"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_c5450b3f",
+      "label": "lets_swim_to_school_with_friends",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_6fc082b0",
+      "label": "gives_to_Nemo",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "freedom",
+        "trust"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5d434135",
+      "label": "remains",
+      "source": [
+        "Dory"
+      ],
+      "target": [
+        "their close companion",
+        "neighbor"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_daffff56",
+      "label": "takes_on_field_trip",
+      "source": [
+        "Mr. Ray the teacher"
+      ],
+      "target": [
+        "the kids"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_05e19a6c",
+      "label": "waves",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "goodbye with a smile instead of fear"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_6dbccf76",
+      "label": "makes_it_to",
+      "source": [
+        "the Tank Gang"
+      ],
+      "target": [
+        "Sydney Harbour"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_17c8d4a7",
+      "label": "remain_sealed_in",
+      "source": [
+        "the Tank Gang"
+      ],
+      "target": [
+        "their plastic bags"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_82818ad1",
+      "label": "bob",
+      "source": [
+        "the Tank Gang"
+      ],
+      "target": [
+        "in the water triumphantly"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d8b8f7a8",
+      "label": "realizes",
+      "source": [
+        "the Tank Gang"
+      ],
+      "target": [
+        "escaped"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_b14ade2f",
+      "label": "is_about",
+      "source": [
+        "Marlin's arc"
+      ],
+      "target": [
+        "learning that he cannot protect Nemo from every danger"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_eaf0522f",
+      "label": "holds",
+      "source": [
+        "trying to protect Nemo from every danger"
+      ],
+      "target": [
+        "Nemo back"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_dfafd9af",
+      "label": "means",
+      "source": [
+        "True love"
+      ],
+      "target": [
+        "trusting those you love to face the world"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_71b25d9e",
+      "label": "is_defined_by",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "fear"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d4741ecc",
+      "label": "loses",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "Coral"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d1742157",
+      "label": "forces_to_confront_every_terror_the_ocean_holds",
+      "source": [
+        "Marlin's journey"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_12bf6af1",
+      "label": "rediscovers",
+      "source": [
+        "Marlin confronting every terror the ocean holds"
+      ],
+      "target": [
+        "Marlin's own courage"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d8da613b",
+      "label": "are_presented_as",
+      "source": [
+        "Nemo's lucky fin",
+        "Dory's memory loss"
+      ],
+      "target": [
+        "challenges"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_da6b2f24",
+      "label": "are_not_presented_as",
+      "source": [
+        "Nemo's lucky fin",
+        "Dory's memory loss"
+      ],
+      "target": [
+        "limitations"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_785fcf1f",
+      "label": "repeatedly_prove",
+      "source": [
+        "Both characters"
+      ],
+      "target": [
+        "their conditions do not define their worth or abilities"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_13011135",
+      "label": "does_not_stop",
+      "source": [
+        "Nemo's fin"
+      ],
+      "target": [
+        "Nemo being brave"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d57678ad",
+      "label": "does_not_stop",
+      "source": [
+        "Dory's memory loss"
+      ],
+      "target": [
+        "Dory being the most loyal and emotionally intelligent character in the film"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f74afe7b",
+      "label": "cannot_complete",
+      "source": [
+        "Marlin"
+      ],
+      "target": [
+        "his journey alone"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_8380498a",
+      "label": "is_aided_by",
+      "source": [
+        "every step of Marlin's journey"
+      ],
+      "target": [
+        "Dory",
+        "Crush",
+        "Nigel",
+        "the moonfish",
+        "Bruce"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_fbbfc3a7",
+      "label": "survives_because_of",
+      "source": [
+        "Nemo"
+      ],
+      "target": [
+        "the Tank Gang's solidarity"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_974d8a76",
+      "label": "serve_as_thematic_counterpoint_to",
+      "source": [
+        "Crush",
+        "Squirt"
+      ],
+      "target": [
+        "Marlin and Nemo"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_99716735",
+      "label": "consists_of",
+      "source": [
+        "Crush's relaxed approach"
+      ],
+      "target": [
+        "letting Squirt learn from experience"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_501035c3",
+      "label": "shows",
+      "source": [
+        "Crush's relaxed approach"
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_b32778dd",
+      "label": "causes",
+      "source": [
+        "children given room to fail and try again"
+      ],
+      "target": [
+        "children grow stronger"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_9c6ecf01",
+      "label": "is",
+      "source": [
+        "Dory's philosophy of \"just keep swimming\""
+      ],
+      "target": [
+        "the film's emotional backbone"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3178dccd",
+      "label": "saves",
+      "source": [
+        "continuing forward when everything seems lost"
+      ],
+      "target": [
+        "them"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_ce0a2b48",
+      "label": "quoted_by",
+      "source": [
+        "\"Just keep swimming, just keep swimming, just keep swimming, swimming, swimming.\""
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3e52ec2c",
+      "label": "quoted_by",
+      "source": [
+        "\"I look at you, and I... and I'm home. Please. I don't want that to go away. I don't want to forget.\""
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_90783ef3",
+      "label": "quoted_by",
+      "source": [
+        "\"Fish are friends, not food.\""
+      ],
+      "target": [
+        "Bruce"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_407edc7a",
+      "label": "quoted_by",
+      "source": [
+        "\"P. Sherman, 42 Wallaby Way, Sydney!\""
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3373a7d5",
+      "label": "quoted_by",
+      "source": [
+        "\"You think you can do these things, but you just can't, Nemo!\""
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_b1c1fd15",
+      "label": "quoted_by",
+      "source": [
+        "\"The sea is not safe, and I promised I'd never let anything happen to him.\""
+      ],
+      "target": [
+        "Marlin"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_fad942d8",
+      "label": "quoted_by",
+      "source": [
+        "\"That's a funny thing to promise... if nothing ever happened to him, then nothing would ever happen to him.\""
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_6760e075",
+      "label": "quoted_by",
+      "source": [
+        "\"When they know, you know, you know?\""
+      ],
+      "target": [
+        "Crush"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5655eb40",
+      "label": "quoted_by",
+      "source": [
+        "\"You got serious thrill issues, dude.\""
+      ],
+      "target": [
+        "Crush"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_de09a757",
+      "label": "quoted_by",
+      "source": [
+        "\"It's like he's trying to speak to me! He's saying something!\""
+      ],
+      "target": [
+        "Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_a574ae23",
+      "label": "quoted_by",
+      "source": [
+        "\"Okay, don't make any sudden moves. Hop inside my mouth if you want to live.\""
+      ],
+      "target": [
+        "Nigel"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_9ed1391b",
+      "label": "quoted_by",
+      "source": [
+        "\"All drains lead to the ocean.\""
+      ],
+      "target": [
+        "Gill"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_dee47e5c",
+      "label": "has_composer",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Thomas Newman"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_7bbeeaec",
+      "label": "has_qualities",
+      "source": [
+        "Thomas Newman's score"
+      ],
+      "target": [
+        "atmospheric",
+        "shimmering"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_637813c7",
+      "label": "uses",
+      "source": [
+        "Thomas Newman's score"
+      ],
+      "target": [
+        "unconventional instruments",
+        "ambient textures"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_314f444d",
+      "label": "evokes",
+      "source": [
+        "Thomas Newman's score"
+      ],
+      "target": [
+        "the vast, mysterious world beneath the waves"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_03035e75",
+      "label": "was_nominated_for",
+      "source": [
+        "Thomas Newman's score"
+      ],
+      "target": [
+        "Academy Award for Best Original Score"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_8f583c0e",
+      "label": "performed_by",
+      "source": [
+        "\"Beyond the Sea\""
+      ],
+      "target": [
+        "Robbie Williams"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_e6f6411f",
+      "label": "plays_over",
+      "source": [
+        "\"Beyond the Sea\""
+      ],
+      "target": [
+        "the end credits"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_74e3f1e0",
+      "label": "nods_to",
+      "source": [
+        "\"Beyond the Sea\""
+      ],
+      "target": [
+        "the film's oceanic adventure"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_631fe2c3",
+      "label": "won",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Academy Award for Best Animated Feature"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_7082e073",
+      "label": "has_year",
+      "source": [
+        "Academy Award for Best Animated Feature"
+      ],
+      "target": [
+        "2004"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3515d83a",
+      "label": "was_nominated_for",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Best Original Screenplay",
+        "Best Original Score",
+        "Best Sound Editing"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_292f830c",
+      "label": "was_at_time_of_release",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "highest-grossing animated film ever"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_923e8b33",
+      "label": "earned",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "$940.3 million worldwide"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3c390c07",
+      "label": "holds",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "99% approval rating on Rotten Tomatoes"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_8574877e",
+      "label": "selected_for_preservation_in",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "National Film Registry"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_0b9cb7df",
+      "label": "selected_by",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Library of Congress"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_3840a52b",
+      "label": "selected_for_preservation_in_year",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "2021"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_c9f58502",
+      "label": "was_inspired_to_make",
+      "source": [
+        "Andrew Stanton"
+      ],
+      "target": [
+        "the film"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_aeb1c9d3",
+      "label": "was_inspired_after",
+      "source": [
+        "Andrew Stanton"
+      ],
+      "target": [
+        "a trip to an aquarium with his son"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_8d7613d6",
+      "label": "led_to_realization",
+      "source": [
+        "Andrew Stanton realizing he was so worried about the boy's safety"
+      ],
+      "target": [
+        "he wasn't letting either of them enjoy the experience"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f4b91b72",
+      "label": "took",
+      "source": [
+        "the Pixar team"
+      ],
+      "target": [
+        "scuba diving lessons",
+        "marine biology courses"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_408caf5c",
+      "label": "studied_extensively",
+      "source": [
+        "the Pixar team"
+      ],
+      "target": [
+        "oceanography"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_24e03c21",
+      "label": "sought_to_portray",
+      "source": [
+        "the Pixar team"
+      ],
+      "target": [
+        "underwater environments accurately"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_2304a798",
+      "label": "required_developing",
+      "source": [
+        "the film"
+      ],
+      "target": [
+        "entirely new technology"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f669f257",
+      "label": "enabled",
+      "source": [
+        "entirely new technology"
+      ],
+      "target": [
+        "rendering water",
+        "light refraction",
+        "the movement of aquatic life"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5d9ba40b",
+      "label": "were",
+      "source": [
+        "the underwater environments in the film"
+      ],
+      "target": [
+        "a massive leap forward in animation technology"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_5641485c",
+      "label": "caused_surge_in",
+      "source": [
+        "the film's release"
+      ],
+      "target": [
+        "clownfish sales"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_04265739",
+      "label": "led_to_express_concern",
+      "source": [
+        "surging clownfish sales worldwide"
+      ],
+      "target": [
+        "marine biologists"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_74b3bb77",
+      "label": "expressed_concern_about",
+      "source": [
+        "marine biologists"
+      ],
+      "target": [
+        "wild populations being captured for aquariums"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_d7993cfb",
+      "label": "is",
+      "source": [
+        "wild populations being captured for aquariums"
+      ],
+      "target": [
+        "an ironic outcome for a film about setting a captive fish free"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_b22b9e66",
+      "label": "is_widely_considered",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "one of Pixar's greatest masterpieces",
+        "one of the finest animated films ever made"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_451d1e86",
+      "label": "dominated",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "the box office in 2003"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_dfce732e",
+      "label": "became",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "a cultural phenomenon"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_c40f6305",
+      "label": "entered_as_mantra_for_perseverance",
+      "source": [
+        "Dory's phrase \"just keep swimming\""
+      ],
+      "target": [
+        "the popular lexicon"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_77fc0d27",
+      "label": "spawned_sequel",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "Finding Dory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_21985bb6",
+      "label": "has_release_year",
+      "source": [
+        "Finding Dory"
+      ],
+      "target": [
+        "2016"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_f64b1b4c",
+      "label": "follows",
+      "source": [
+        "Finding Dory"
+      ],
+      "target": [
+        "Dory searching for her own parents",
+        "Dory's backstory"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_6560de06",
+      "label": "explores_with",
+      "source": [
+        "Finding Dory"
+      ],
+      "target": [
+        "the same emotional depth"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_fbf9a7f9",
+      "label": "grossed",
+      "source": [
+        "Finding Dory"
+      ],
+      "target": [
+        "over $1 billion worldwide"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_67f3e6cf",
+      "label": "inspired",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "The Seas with Nemo & Friends",
+        "Turtle Talk with Crush"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_c0848cb1",
+      "label": "is_attraction_at",
+      "source": [
+        "The Seas with Nemo & Friends"
+      ],
+      "target": [
+        "EPCOT in Walt Disney World"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_99e1a513",
+      "label": "is",
+      "source": [
+        "Turtle Talk with Crush"
+      ],
+      "target": [
+        "an interactive show featuring real-time animation"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_26ed8497",
+      "label": "endures_because",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "its story is universal"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_625f6d72",
+      "label": "includes",
+      "source": [
+        "its story"
+      ],
+      "target": [
+        "a parent's love",
+        "a child's need for independence",
+        "the courage it takes to let go"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_24cb7905",
+      "label": "contains",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "dazzling ocean visuals",
+        "sharp humor"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    },
+    {
+      "id": "e_e39c3b1a",
+      "label": "contains_beneath_visuals_and_humor",
+      "source": [
+        "Finding Nemo"
+      ],
+      "target": [
+        "one of cinema's most poignant meditations on fear, loss, and the bravery of simply moving forward"
+      ],
+      "weight": 1.0,
+      "chunk_id": "bd2bace30d27a6a071ec761334451daf"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>RAPTOR Tree Visualization</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden}
+    #canvas{position:absolute;inset:0;width:100%;height:100vh}
+    svg{width:100%;height:100%}
+
+    .panel{
+      position:absolute;z-index:20;background:rgba(15,23,42,0.92);
+      border:1px solid rgba(148,163,184,0.18);border-radius:12px;
+      padding:14px 16px;backdrop-filter:blur(10px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    }
+    #controls{top:16px;left:16px;width:320px}
+    #details{left:16px;bottom:16px;width:450px;max-height:280px;overflow:auto}
+    #stats{top:16px;right:16px;min-width:200px}
+
+    h2{font-size:17px;margin-bottom:8px;color:#e2e8f0}
+    .muted{color:#94a3b8;font-size:11px;line-height:1.4}
+    .row{margin:5px 0;font-size:12px}
+    .mono{font-family:Consolas,monospace;word-break:break-word;font-size:11px}
+    label{font-size:12px;color:#cbd5e1;display:block;margin-top:8px}
+    input[type=text]{width:100%;padding:7px 10px;border:1px solid rgba(148,163,184,0.24);border-radius:8px;background:rgba(30,41,59,0.9);color:#fff;font-size:12px;margin:4px 0}
+    input[type=range]{width:100%;margin:4px 0}
+    select{width:100%;padding:6px 8px;border:1px solid rgba(148,163,184,0.24);border-radius:8px;background:rgba(30,41,59,0.9);color:#fff;font-size:12px;margin:4px 0}
+
+    .btn-row{display:flex;gap:8px;margin:10px 0}
+    .btn{padding:6px 14px;border:1px solid rgba(148,163,184,0.3);border-radius:8px;
+          background:rgba(30,41,59,0.8);color:#e2e8f0;cursor:pointer;font-size:12px;
+          transition:background 0.15s}
+    .btn:hover{background:rgba(59,130,246,0.3)}
+    .btn.active{background:rgba(59,130,246,0.5);border-color:#3b82f6}
+
+    .legend{display:flex;gap:12px;margin:8px 0;font-size:11px;flex-wrap:wrap}
+    .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+
+    .node-label{fill:#e2e8f0;font-size:10px;pointer-events:none}
+    .link{fill:none}
+    .tree-link{fill:none;stroke:#475569;stroke-width:1.5}
+  </style>
+</head>
+<body>
+  <div id="canvas"><svg id="svg"></svg></div>
+
+  <div id="controls" class="panel">
+    <h2>RAPTOR Viewer</h2>
+    <div class="muted">Hierarchical RAG index. Leaves=chunks, internal nodes=LLM summaries.<br>
+    Soft clustering: a node may have multiple parents (DAG view).</div>
+
+    <div class="btn-row">
+      <button class="btn active" id="btnDAG">DAG View</button>
+      <button class="btn" id="btnTree">Tree View</button>
+    </div>
+
+    <label>Search nodes</label>
+    <input id="searchInput" type="text" placeholder="Type to filter by text..."/>
+
+    <label>Min edge weight: <span id="weightVal">0.00</span></label>
+    <input id="weightSlider" type="range" min="0" max="1" step="0.01" value="0"/>
+
+    <label>Show level</label>
+    <select id="levelFilter"><option value="all">All levels</option></select>
+
+    <div class="legend" id="legendBox"></div>
+    <div class="muted" style="margin-top:8px">Drag nodes &middot; Scroll to zoom &middot; Hover for details</div>
+  </div>
+
+  <div id="stats" class="panel"></div>
+  <div id="details" class="panel">Hover over a node for details.</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script>
+  (function(){
+
+    /* ====== DATA ====== */
+    const DAG    = {"nodes": [{"id": "raptor_L0_0000", "level": 0, "type": "leaf", "name": "# Cars (2006)\n\n## Overview\n\n- **Title:** Cars\n- **Studio:** Pixar Animation Studios / Walt Disney Pictures\n- **Director:** John Lasseter\n- **Co-Directors:** Joe Ranft\n- **Screenplay:** Dan Fogelman, J...", "full_text": "# Cars (2006)\n\n## Overview\n\n- **Title:** Cars\n- **Studio:** Pixar Animation Studios / Walt Disney Pictures\n- **Director:** John Lasseter\n- **Co-Directors:** Joe Ranft\n- **Screenplay:** Dan Fogelman, John Lasseter, Joe Ranft, Kiel Murray, Phil Lorin, Jorgen Klubien\n- **Release Date:** June 9, 2006\n- **Genre:** Animated Comedy-Adventure\n- **Runtime:** 117 minutes\n\n---\n\n## Main Characters\n\n- **Lightning McQueen** -- A hotshot rookie race car, #95, sponsored by Rust-eze.", "token_count": 138}, {"id": "raptor_L0_0001", "level": 0, "type": "leaf", "name": "Arrogant and self-centered at the start, he learns humility and the value of friendship. - **Mater** -- A rusty but lovable tow truck in Radiator Springs. Becomes Lightning's best friend. - **Sally Ca...", "full_text": "Arrogant and self-centered at the start, he learns humility and the value of friendship. - **Mater** -- A rusty but lovable tow truck in Radiator Springs. Becomes Lightning's best friend. - **Sally Carrera** -- A Porsche 911 and the town attorney of Radiator Springs. She left her fast-paced life in Los Angeles for a simpler existence. Lightning's love interest.", "token_count": 86}, {"id": "raptor_L0_0002", "level": 0, "type": "leaf", "name": "- **Doc Hudson** -- A 1951 Hudson Hornet who is the town judge and doctor. Secretly a legendary three-time Piston Cup champion known as the Fabulous Hudson Hornet. - **Sheriff** -- The law enforcement...", "full_text": "- **Doc Hudson** -- A 1951 Hudson Hornet who is the town judge and doctor. Secretly a legendary three-time Piston Cup champion known as the Fabulous Hudson Hornet. - **Sheriff** -- The law enforcement of Radiator Springs, a 1949 Mercury Police Cruiser. - **Ramone** -- A 1959 Chevrolet Impala Lowrider who runs the body art shop. Loves to repaint himself daily.", "token_count": 92}, {"id": "raptor_L0_0003", "level": 0, "type": "leaf", "name": "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, the local gas station and diner. Ramone's wife. - **Luigi** -- A yellow Fiat 500 who runs Luigi's Casa Della Tires. Passionate about Ferrari. - **...", "full_text": "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, the local gas station and diner. Ramone's wife. - **Luigi** -- A yellow Fiat 500 who runs Luigi's Casa Della Tires. Passionate about Ferrari. - **Guido** -- Luigi's small forklift assistant. Dreams of performing a real pit stop.", "token_count": 81}, {"id": "raptor_L0_0004", "level": 0, "type": "leaf", "name": "- **Sarge** -- A 1941 Willys military jeep who runs a surplus store. Constantly bickers with Fillmore. - **Fillmore** -- A 1960 VW Bus and the local hippie who sells organic fuel. - **Red** -- The shy...", "full_text": "- **Sarge** -- A 1941 Willys military jeep who runs a surplus store. Constantly bickers with Fillmore. - **Fillmore** -- A 1960 VW Bus and the local hippie who sells organic fuel. - **Red** -- The shy fire truck of Radiator Springs. - **Lizzie** -- A 1923 Ford Model T, the oldest resident of Radiator Springs and widow of the town's founder, Stanley.", "token_count": 95}, {"id": "raptor_L0_0005", "level": 0, "type": "leaf", "name": "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car, #86. Lightning's ruthless rival on the track. - **The King (Strip Weathers)** -- A 1970 Plymouth Superbird, #43. The retiring veteran champion, m...", "full_text": "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car, #86. Lightning's ruthless rival on the track. - **The King (Strip Weathers)** -- A 1970 Plymouth Superbird, #43. The retiring veteran champion, modeled after Richard Petty. - **Mack** -- Lightning McQueen's loyal transport truck.", "token_count": 75}, {"id": "raptor_L0_0006", "level": 0, "type": "leaf", "name": "---\n\n## Plot Summary\n\n### Act 1: The Race and the Journey\n\nThe story begins at the final race of the Piston Cup season at the Motor Speedway of the South. Three cars are tied for the championship: the...", "full_text": "---\n\n## Plot Summary\n\n### Act 1: The Race and the Journey\n\nThe story begins at the final race of the Piston Cup season at the Motor Speedway of the South. Three cars are tied for the championship: the retiring legend **Strip \"The King\" Weathers**, the perennial runner-up **Chick Hicks**, and the brash rookie sensation **Lightning McQueen**. Lightning is talented but arrogant, refusing help from his pit crew and alienating everyone around him.", "token_count": 99}, {"id": "raptor_L0_0007", "level": 0, "type": "leaf", "name": "The race ends in an unprecedented three-way tie, and a tiebreaker race is scheduled for one week later at the Los Angeles International Speedway. Lightning is desperate to win because the Piston Cup c...", "full_text": "The race ends in an unprecedented three-way tie, and a tiebreaker race is scheduled for one week later at the Los Angeles International Speedway. Lightning is desperate to win because the Piston Cup championship will earn him the prestigious Dinoco sponsorship, replacing the retiring King. After the race, he pressures his transport truck **Mack** to drive through the night to reach California first. During the overnight drive, Mack falls asleep at the wheel.", "token_count": 89}, {"id": "raptor_L0_0008", "level": 0, "type": "leaf", "name": "When a group of reckless street racers (Boost, DJ, Wingo, and Snot Rod) startle Mack, Lightning tumbles out the back of the trailer onto the highway, lost and alone. Panicking, Lightning chases what h...", "full_text": "When a group of reckless street racers (Boost, DJ, Wingo, and Snot Rod) startle Mack, Lightning tumbles out the back of the trailer onto the highway, lost and alone. Panicking, Lightning chases what he thinks is Mack through the darkness and accidentally tears through the small, forgotten town of **Radiator Springs** on Route 66, destroying the main road in the process.", "token_count": 84}, {"id": "raptor_L0_0009", "level": 0, "type": "leaf", "name": "He is apprehended by **Sheriff** after a wild chase and brought before the town's judge, **Doc Hudson**, the next morning. ### Act 2: Radiator Springs\n\nDoc initially wants to kick Lightning out of tow...", "full_text": "He is apprehended by **Sheriff** after a wild chase and brought before the town's judge, **Doc Hudson**, the next morning. ### Act 2: Radiator Springs\n\nDoc initially wants to kick Lightning out of town, but **Sally Carrera**, the town attorney, argues that he should be made to fix the road he destroyed.", "token_count": 72}, {"id": "raptor_L0_0010", "level": 0, "type": "leaf", "name": "Lightning is sentenced to community service: he must repave the entire stretch of road using the town's road-paving machine, Bessie. Lightning at first tries to rush through the job, producing a terri...", "full_text": "Lightning is sentenced to community service: he must repave the entire stretch of road using the town's road-paving machine, Bessie. Lightning at first tries to rush through the job, producing a terrible road surface. Doc challenges him to a race at Willy's Butte: if Lightning wins, he can leave; if Doc wins, Lightning has to start the road over. Lightning, confident he'll win easily, accepts.", "token_count": 91}, {"id": "raptor_L0_0011", "level": 0, "type": "leaf", "name": "But the dirt track has a sharp turn, and Lightning flies off into a cactus patch while Doc navigates the turn expertly. Lightning is forced to start over. As the days pass, Lightning reluctantly gets ...", "full_text": "But the dirt track has a sharp turn, and Lightning flies off into a cactus patch while Doc navigates the turn expertly. Lightning is forced to start over. As the days pass, Lightning reluctantly gets to know the residents of Radiator Springs. He learns the town was once a thriving stop on Route 66 but was bypassed when Interstate 40 was built, and the town slowly withered as travelers no longer came through.", "token_count": 89}, {"id": "raptor_L0_0012", "level": 0, "type": "leaf", "name": "Each resident has a story:\n\n- **Sally** tells Lightning about how she left her high-powered life in LA and found real happiness in the slower pace of Radiator Springs. - **Mater** befriends Lightning ...", "full_text": "Each resident has a story:\n\n- **Sally** tells Lightning about how she left her high-powered life in LA and found real happiness in the slower pace of Radiator Springs. - **Mater** befriends Lightning unconditionally, taking him tractor tipping and showing him genuine, uncomplicated friendship. - **Doc Hudson** remains cold and antagonistic toward Lightning.", "token_count": 73}, {"id": "raptor_L0_0013", "level": 0, "type": "leaf", "name": "While exploring Doc's garage, Lightning discovers three Piston Cup trophies and a newspaper clipping revealing Doc is the **Fabulous Hudson Hornet**, a racing legend from the 1950s. Doc had a terrible...", "full_text": "While exploring Doc's garage, Lightning discovers three Piston Cup trophies and a newspaper clipping revealing Doc is the **Fabulous Hudson Hornet**, a racing legend from the 1950s. Doc had a terrible crash, and when he recovered, racing had moved on without him. He was replaced and forgotten, leaving him bitter toward the racing world.", "token_count": 70}, {"id": "raptor_L0_0014", "level": 0, "type": "leaf", "name": "Lightning confronts Doc about his past, but Doc angrily tells him the racing world is hollow and will chew him up and spit him out just as it did to Doc. Lightning's attitude gradually shifts. He begi...", "full_text": "Lightning confronts Doc about his past, but Doc angrily tells him the racing world is hollow and will chew him up and spit him out just as it did to Doc. Lightning's attitude gradually shifts. He begins to genuinely care about the town and its residents. He gets a new paint job from **Ramone**, new tires from **Luigi** and **Guido**, and fills up at **Flo's V8 Cafe**.", "token_count": 89}, {"id": "raptor_L0_0015", "level": 0, "type": "leaf", "name": "He drives with Sally to the Wheel Well Motel overlooking the town at sunset, and Sally tells him the history of Route 66 and how the Interstate took the magic of the journey away. Lightning begins to ...", "full_text": "He drives with Sally to the Wheel Well Motel overlooking the town at sunset, and Sally tells him the history of Route 66 and how the Interstate took the magic of the journey away. Lightning begins to fall for Sally and the town itself. One evening, Lightning takes everyone for a cruise down the main drag and turns on all the neon lights of the old businesses, revealing the town's former beauty. For one magical night, Radiator Springs glows as it once did.", "token_count": 97}, {"id": "raptor_L0_0016", "level": 0, "type": "leaf", "name": "### Act 3: Discovery, Departure, and the Big Race\n\nJust as Lightning finishes the road and begins to truly bond with the community, the media, alerted by Doc (who called them hoping to get Lightning o...", "full_text": "### Act 3: Discovery, Departure, and the Big Race\n\nJust as Lightning finishes the road and begins to truly bond with the community, the media, alerted by Doc (who called them hoping to get Lightning out of town and out of their lives), descends on Radiator Springs. Mack arrives, and Lightning is whisked away to California for the tiebreaker race before he can even say goodbye.", "token_count": 84}, {"id": "raptor_L0_0017", "level": 0, "type": "leaf", "name": "The town is left stunned, and Doc, seeing how heartbroken everyone is, realizes he made a mistake. At the Los Angeles International Speedway, Lightning is physically present but emotionally absent. He...", "full_text": "The town is left stunned, and Doc, seeing how heartbroken everyone is, realizes he made a mistake. At the Los Angeles International Speedway, Lightning is physically present but emotionally absent. He can't stop thinking about his friends in Radiator Springs. He starts the race poorly, distracted and unfocused. Then over his radio, he hears a familiar voice: **Doc Hudson**, who has come to the race as Lightning's crew chief, wearing his old Fabulous Hudson Hornet colors.", "token_count": 98}, {"id": "raptor_L0_0018", "level": 0, "type": "leaf", "name": "Behind Doc, the entire town of Radiator Springs has come to serve as Lightning's pit crew. **Guido** finally gets to perform a real pit stop (and does it in record time, stunning everyone). **Mater**,...", "full_text": "Behind Doc, the entire town of Radiator Springs has come to serve as Lightning's pit crew. **Guido** finally gets to perform a real pit stop (and does it in record time, stunning everyone). **Mater**, **Luigi**, **Sarge**, **Fillmore**, **Ramone**, **Flo**, **Sheriff**, and **Red** are all there, cheering him on. Inspired by his friends, Lightning surges back into contention.", "token_count": 95}, {"id": "raptor_L0_0019", "level": 0, "type": "leaf", "name": "The race comes down to the final lap between Lightning, Chick Hicks, and The King. Chick, desperate to win, deliberately rams The King, sending him into a horrifying crash that mirrors Doc Hudson's wr...", "full_text": "The race comes down to the final lap between Lightning, Chick Hicks, and The King. Chick, desperate to win, deliberately rams The King, sending him into a horrifying crash that mirrors Doc Hudson's wreck decades earlier. Lightning is about to cross the finish line and win the Piston Cup when he sees The King's crumpled body on the infield. He remembers Doc's story, how racing abandoned him after his crash, and he makes a choice.", "token_count": 95}, {"id": "raptor_L0_0020", "level": 0, "type": "leaf", "name": "Lightning **slams on his brakes** just inches from the finish line. Chick Hicks crosses first and wins the Piston Cup, but Lightning doesn't care. He reverses back to The King and pushes him across th...", "full_text": "Lightning **slams on his brakes** just inches from the finish line. Chick Hicks crosses first and wins the Piston Cup, but Lightning doesn't care. He reverses back to The King and pushes him across the finish line so that the veteran can finish his last race with dignity. The crowd erupts. Chick Hicks is booed on the podium despite his victory, and his hollow win means nothing.", "token_count": 85}, {"id": "raptor_L0_0021", "level": 0, "type": "leaf", "name": "### Epilogue\n\nLightning turns down the Dinoco sponsorship, staying loyal to his original sponsor, Rust-eze, because they believed in him when no one else did. He does request one small favor from Dino...", "full_text": "### Epilogue\n\nLightning turns down the Dinoco sponsorship, staying loyal to his original sponsor, Rust-eze, because they believed in him when no one else did. He does request one small favor from Dinoco's owner: a helicopter ride for Mater (which Mater has always dreamed of). Lightning decides to establish his racing headquarters in **Radiator Springs**, putting the town back on the map.", "token_count": 82}, {"id": "raptor_L0_0022", "level": 0, "type": "leaf", "name": "Tourists begin visiting again, the businesses reopen to thriving crowds, and the town is reborn. Lightning and Sally begin a relationship, and Lightning has found something far more valuable than any ...", "full_text": "Tourists begin visiting again, the businesses reopen to thriving crowds, and the town is reborn. Lightning and Sally begin a relationship, and Lightning has found something far more valuable than any trophy: a home, real friends, and the understanding that life is about the journey, not just the finish line. ---\n\n## Themes\n\n- **Slowing down to appreciate life:** The central message of the film is that the journey matters more than the destination.", "token_count": 91}, {"id": "raptor_L0_0023", "level": 0, "type": "leaf", "name": "Route 66's replacement by the Interstate serves as a metaphor for how modern life prioritizes speed and efficiency over experience and connection. - **Community and friendship:** Lightning transforms ...", "full_text": "Route 66's replacement by the Interstate serves as a metaphor for how modern life prioritizes speed and efficiency over experience and connection. - **Community and friendship:** Lightning transforms from a selfish loner (\"I'm a one-man show\") into someone who values others and recognizes that no one succeeds alone. - **Legacy and being forgotten:** Doc Hudson's story explores what happens when someone is cast aside after giving everything, and how bitterness can give way to mentorship.", "token_count": 93}, {"id": "raptor_L0_0024", "level": 0, "type": "leaf", "name": "- **Humility and sportsmanship:** Lightning's decision to forfeit the race to help The King finish is the ultimate demonstration of character growth. - **Redemption:** Both Lightning and Doc find rede...", "full_text": "- **Humility and sportsmanship:** Lightning's decision to forfeit the race to help The King finish is the ultimate demonstration of character growth. - **Redemption:** Both Lightning and Doc find redemption -- Lightning by becoming a better car, and Doc by re-engaging with the racing world he had shut out.", "token_count": 63}, {"id": "raptor_L0_0025", "level": 0, "type": "leaf", "name": "---\n\n## Notable Quotes\n\n> \"I'm a precision instrument of speed and aerodynamics.\" -- Lightning McQueen\n\n> \"I'm happier than a tornado in a trailer park!\" -- Mater\n\n> \"I create feelings in others that ...", "full_text": "---\n\n## Notable Quotes\n\n> \"I'm a precision instrument of speed and aerodynamics.\" -- Lightning McQueen\n\n> \"I'm happier than a tornado in a trailer park!\" -- Mater\n\n> \"I create feelings in others that they themselves don't understand.\" -- Lightning McQueen\n\n> \"Turn right to go left.\" -- Doc Hudson\n\n> \"It was the town that got to him.", "token_count": 82}, {"id": "raptor_L0_0026", "level": 0, "type": "leaf", "name": "They changed him.\" -- Sally Carrera\n\n> \"These are good folk around here, who care about one another. I don't want them depending on someone they can't count on.\" -- Doc Hudson\n\n> \"I knew you couldn't ...", "full_text": "They changed him.\" -- Sally Carrera\n\n> \"These are good folk around here, who care about one another. I don't want them depending on someone they can't count on.\" -- Doc Hudson\n\n> \"I knew you couldn't drive.", "token_count": 51}, {"id": "raptor_L0_0027", "level": 0, "type": "leaf", "name": "I didn't know you couldn't read.\" -- Doc Hudson\n\n> \"Float like a Cadillac, sting like a Beemer.\" -- Lightning McQueen\n\n> \"There's a lot more to racing than just winning.\" -- Doc Hudson (The Fabulous H...", "full_text": "I didn't know you couldn't read.\" -- Doc Hudson\n\n> \"Float like a Cadillac, sting like a Beemer.\" -- Lightning McQueen\n\n> \"There's a lot more to racing than just winning.\" -- Doc Hudson (The Fabulous Hudson Hornet)\n\n---\n\n## Soundtrack Highlights\n\n- **\"Real Gone\"** by Sheryl Crow -- Opening racing sequence\n- **\"Life Is a Highway\"** by Rascal Flatts -- Lightning's road trip montage\n- **\"Our Town\"** by James Taylor -- Radiator Springs' melancholy history (nominated for Academy Award for Best Original Song)\n- **\"Behind the Clouds\"** by Brad Paisley -- End credits\n- **\"Route 66\"** by Chuck Berry -- Classic Route 66 anthem\n\n---\n\n## Legacy\n\n*Cars* was a massive commercial success, grossing over $460 million worldwide.", "token_count": 183}, {"id": "raptor_L0_0028", "level": 0, "type": "leaf", "name": "It launched one of Pixar's most lucrative franchises, generating billions in merchandise revenue. The film spawned two sequels -- *Cars 2* (2011) and *Cars 3* (2017) -- as well as spin-off films (*Pla...", "full_text": "It launched one of Pixar's most lucrative franchises, generating billions in merchandise revenue. The film spawned two sequels -- *Cars 2* (2011) and *Cars 3* (2017) -- as well as spin-off films (*Planes*, 2013), short films, theme park attractions (Cars Land at Disney California Adventure), and an extensive toy line.", "token_count": 77}, {"id": "raptor_L0_0029", "level": 0, "type": "leaf", "name": "The film was the last project that **Joe Ranft**, Pixar's beloved head of story, worked on before his death in a car accident in 2005. The film is dedicated to his memory. *Cars* holds a special place...", "full_text": "The film was the last project that **Joe Ranft**, Pixar's beloved head of story, worked on before his death in a car accident in 2005. The film is dedicated to his memory. *Cars* holds a special place in Pixar's filmography as director John Lasseter's deeply personal love letter to Route 66, classic American car culture, and the small towns that time forgot.", "token_count": 82}, {"id": "raptor_L1_0000", "level": 1, "type": "summary", "name": "At the final Piston Cup race at the Motor Speedway of the South, retiring legend Strip “The King” Weathers, perennial runner-up Chick Hicks, and brash rookie Lightning McQueen finish in an unprecedent...", "full_text": "At the final Piston Cup race at the Motor Speedway of the South, retiring legend Strip “The King” Weathers, perennial runner-up Chick Hicks, and brash rookie Lightning McQueen finish in an unprecedented three-way tie, setting a tiebreaker for one week later at the Los Angeles International Speedway; arrogant and self-centered, Lightning wants the championship to secure the prestigious Dinoco sponsorship replacing the retiring King, pressures his transport truck Mack to drive overnight, and after reckless street racers Boost, DJ, Wingo, and Snot Rod startle Mack, tumbles from the trailer, gets lost, and tears through Radiator Springs on Route 66, destroying its main road. Apprehended by Sheriff and brought before Judge Doc Hudson, Lightning is nearly kicked out until Sally Carrera—a Porsche 911, the town attorney, who left her fast-paced Los Angeles life for a simpler one in Radiator Springs and becomes Lightning’s love interest—argues he should repair the damage; sentenced to repave the road with Bessie, he botches it by rushing, then loses a wager race against Doc at Willy’s Butte when Doc expertly handles a sharp dirt-track turn and Lightning crashes into a cactus patch, forcing him to start over. As he remains in town, Lightning learns Radiator Springs was once a thriving Route 66 stop before Interstate 40 bypassed it; he is befriended by Mater, a rusty but lovable tow truck who becomes his best friend, goes tractor tipping, hears Sally explain how the Interstate took the magic out of the journey, receives a new paint job from Ramone, new tires from Luigi and Guido, stops at Flo’s V8 Cafe, and helps revive the town’s spirit by cruising the main drag and lighting its neon, while Doc stays cold, insisting the racing world is hollow and will chew racers up and spit them out. Lightning gradually learns humility, friendship, community, and that the journey matters more than the destination, changing from a selfish loner who says “I’m a one-man show” and boasts, “I’m a precision instrument of speed and aerodynamics” and “I create feelings in others that they themselves don’t understand,” into someone who genuinely cares about others; Doc’s bitterness reflects legacy, abandonment, and redemption after his own devastating crash, encapsulated in “Turn right to go left” and “These are good folk around here, who care about one another. I don’t want them depending on someone they can’t count on,” while Sally later says, “It was the town that got to him. They changed him.” Just as Lightning finishes the road and bonds with the town, Doc—hoping to get him out of their lives—alerts the media, Mack arrives, and Lightning is whisked to California before saying goodbye; realizing his mistake, Doc appears at the tiebreaker as Lightning’s crew chief in his old Fabulous Hudson Hornet colors, with Mater, Luigi, Guido, Sarge, Fillmore, Ramone, Flo, Sheriff, and Red serving as pit crew, where Guido performs a real pit stop in record time. Distracted at first, Lightning rallies, but on the final lap Chick deliberately rams The King into a horrific crash mirroring Doc’s wreck decades earlier; inches from winning, Lightning slams on his brakes, lets Chick take the Piston Cup, then reverses to push The King across the finish line so he can complete his last race with dignity, demonstrating humility and sportsmanship as Chick is booed for his hollow victory. In the epilogue, Lightning turns down Dinoco, remains loyal to Rust-eze because they believed in him when no one else did, asks Dinoco’s owner for one favor—a helicopter ride Mater has always dreamed of (“I’m happier than a tornado in a trailer park!”)—and establishes his racing headquarters in Radiator Springs, reviving tourism and businesses; Lightning and Sally begin a relationship, Doc and Lightning both find redemption, and Lightning discovers a home, real friends, and values more important than any trophy.", "token_count": 828}, {"id": "raptor_L1_0001", "level": 1, "type": "summary", "name": "Cars is a 2006 animated comedy-adventure from Pixar Animation Studios and Walt Disney Pictures, directed by John Lasseter, co-directed by Joe Ranft, written by Dan Fogelman, John Lasseter, Joe Ranft, ...", "full_text": "Cars is a 2006 animated comedy-adventure from Pixar Animation Studios and Walt Disney Pictures, directed by John Lasseter, co-directed by Joe Ranft, written by Dan Fogelman, John Lasseter, Joe Ranft, Kiel Murray, Phil Lorin, and Jorgen Klubien, released June 9, 2006, with a runtime of 117 minutes. It centers on hotshot rookie race car Lightning McQueen, #95, sponsored by Rust-eze, alongside Radiator Springs residents including Doc Hudson, a 1951 Hudson Hornet who serves as town judge and doctor and is secretly the Fabulous Hudson Hornet, a legendary three-time Piston Cup champion; Sheriff, a 1949 Mercury Police Cruiser; Ramone, a 1959 Chevrolet Impala Lowrider who runs the body art shop and repaints himself daily; Flo, a 1950s show car who runs Flo's V8 Cafe, the local gas station and diner, and is Ramone's wife; Luigi, a yellow Fiat 500 who runs Luigi's Casa Della Tires and loves Ferrari; Guido, Luigi's small forklift assistant who dreams of performing a real pit stop; Sarge, a 1941 Willys military jeep who runs a surplus store and bickers with Fillmore; Fillmore, a 1960 VW Bus who sells organic fuel; Red, the shy fire truck; Lizzie, a 1923 Ford Model T, oldest resident and widow of founder Stanley; Chick Hicks, a ruthless rival and 1979 Shyster Cremlin stock car, #86; The King, or Strip Weathers, a retiring veteran champion and 1970 Plymouth Superbird, #43, modeled after Richard Petty; and Mack, Lightning’s loyal transport truck. While exploring Doc’s garage, Lightning finds three Piston Cup trophies and a newspaper clipping revealing Doc’s 1950s fame and that after a terrible crash he recovered only to find racing had moved on, leaving him replaced, forgotten, and bitter toward the sport. Notable lines include Doc’s “I didn't know you couldn't read.” and “There's a lot more to racing than just winning,” and Lightning’s “Float like a Cadillac, sting like a Beemer.” Soundtrack highlights are “Real Gone” by Sheryl Crow for the opening racing sequence, “Life Is a Highway” by Rascal Flatts for Lightning’s road trip montage, “Our Town” by James Taylor for Radiator Springs’ melancholy history, which was nominated for the Academy Award for Best Original Song, “Behind the Clouds” by Brad Paisley in the end credits, and “Route 66” by Chuck Berry. The film grossed over $460 million worldwide, launched one of Pixar’s most lucrative franchises with billions in merchandise revenue, and spawned Cars 2 (2011), Cars 3 (2017), spin-off films including Planes (2013), short films, theme park attractions including Cars Land at Disney California Adventure, and an extensive toy line. It was the last project worked on by Pixar head of story Joe Ranft before his death in a car accident in 2005, is dedicated to his memory, and holds a special place in Pixar’s filmography as John Lasseter’s personal love letter to Route 66, classic American car culture, and forgotten small towns.", "token_count": 691}], "links": [{"source": "raptor_L1_0000", "target": "raptor_L0_0001", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0006", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0007", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0008", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0009", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0010", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0011", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0012", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0014", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0015", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0016", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0017", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0018", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0019", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0020", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0021", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0022", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0023", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0024", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0025", "weight": 1.0}, {"source": "raptor_L1_0000", "target": "raptor_L0_0026", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0000", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0002", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0003", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0004", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0005", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0013", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0027", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0028", "weight": 1.0}, {"source": "raptor_L1_0001", "target": "raptor_L0_0029", "weight": 1.0}]};
+    const TREE   = {"id": "raptor_root", "name": "RAPTOR Root", "level": 2, "type": "root", "token_count": 0, "children": [{"id": "raptor_L1_0000", "name": "At the final Piston Cup race at the Motor Speedway of the South, retiring legend Strip “The King” Weathers, perennial ru...", "level": 1, "type": "summary", "token_count": 828, "children": [{"id": "raptor_L0_0001", "name": "Arrogant and self-centered at the start, he learns humility and the value of friendship. - **Mater** -- A rusty but lova...", "level": 0, "type": "leaf", "token_count": 86}, {"id": "raptor_L0_0006", "name": "---\n\n## Plot Summary\n\n### Act 1: The Race and the Journey\n\nThe story begins at the final race of the Piston Cup season a...", "level": 0, "type": "leaf", "token_count": 99}, {"id": "raptor_L0_0007", "name": "The race ends in an unprecedented three-way tie, and a tiebreaker race is scheduled for one week later at the Los Angele...", "level": 0, "type": "leaf", "token_count": 89}, {"id": "raptor_L0_0008", "name": "When a group of reckless street racers (Boost, DJ, Wingo, and Snot Rod) startle Mack, Lightning tumbles out the back of ...", "level": 0, "type": "leaf", "token_count": 84}, {"id": "raptor_L0_0009", "name": "He is apprehended by **Sheriff** after a wild chase and brought before the town's judge, **Doc Hudson**, the next mornin...", "level": 0, "type": "leaf", "token_count": 72}, {"id": "raptor_L0_0010", "name": "Lightning is sentenced to community service: he must repave the entire stretch of road using the town's road-paving mach...", "level": 0, "type": "leaf", "token_count": 91}, {"id": "raptor_L0_0011", "name": "But the dirt track has a sharp turn, and Lightning flies off into a cactus patch while Doc navigates the turn expertly. ...", "level": 0, "type": "leaf", "token_count": 89}, {"id": "raptor_L0_0012", "name": "Each resident has a story:\n\n- **Sally** tells Lightning about how she left her high-powered life in LA and found real ha...", "level": 0, "type": "leaf", "token_count": 73}, {"id": "raptor_L0_0014", "name": "Lightning confronts Doc about his past, but Doc angrily tells him the racing world is hollow and will chew him up and sp...", "level": 0, "type": "leaf", "token_count": 89}, {"id": "raptor_L0_0015", "name": "He drives with Sally to the Wheel Well Motel overlooking the town at sunset, and Sally tells him the history of Route 66...", "level": 0, "type": "leaf", "token_count": 97}, {"id": "raptor_L0_0016", "name": "### Act 3: Discovery, Departure, and the Big Race\n\nJust as Lightning finishes the road and begins to truly bond with the...", "level": 0, "type": "leaf", "token_count": 84}, {"id": "raptor_L0_0017", "name": "The town is left stunned, and Doc, seeing how heartbroken everyone is, realizes he made a mistake. At the Los Angeles In...", "level": 0, "type": "leaf", "token_count": 98}, {"id": "raptor_L0_0018", "name": "Behind Doc, the entire town of Radiator Springs has come to serve as Lightning's pit crew. **Guido** finally gets to per...", "level": 0, "type": "leaf", "token_count": 95}, {"id": "raptor_L0_0019", "name": "The race comes down to the final lap between Lightning, Chick Hicks, and The King. Chick, desperate to win, deliberately...", "level": 0, "type": "leaf", "token_count": 95}, {"id": "raptor_L0_0020", "name": "Lightning **slams on his brakes** just inches from the finish line. Chick Hicks crosses first and wins the Piston Cup, b...", "level": 0, "type": "leaf", "token_count": 85}, {"id": "raptor_L0_0021", "name": "### Epilogue\n\nLightning turns down the Dinoco sponsorship, staying loyal to his original sponsor, Rust-eze, because they...", "level": 0, "type": "leaf", "token_count": 82}, {"id": "raptor_L0_0022", "name": "Tourists begin visiting again, the businesses reopen to thriving crowds, and the town is reborn. Lightning and Sally beg...", "level": 0, "type": "leaf", "token_count": 91}, {"id": "raptor_L0_0023", "name": "Route 66's replacement by the Interstate serves as a metaphor for how modern life prioritizes speed and efficiency over ...", "level": 0, "type": "leaf", "token_count": 93}, {"id": "raptor_L0_0024", "name": "- **Humility and sportsmanship:** Lightning's decision to forfeit the race to help The King finish is the ultimate demon...", "level": 0, "type": "leaf", "token_count": 63}, {"id": "raptor_L0_0025", "name": "---\n\n## Notable Quotes\n\n> \"I'm a precision instrument of speed and aerodynamics.\" -- Lightning McQueen\n\n> \"I'm happier t...", "level": 0, "type": "leaf", "token_count": 82}, {"id": "raptor_L0_0026", "name": "They changed him.\" -- Sally Carrera\n\n> \"These are good folk around here, who care about one another. I don't want them d...", "level": 0, "type": "leaf", "token_count": 51}]}, {"id": "raptor_L1_0001", "name": "Cars is a 2006 animated comedy-adventure from Pixar Animation Studios and Walt Disney Pictures, directed by John Lassete...", "level": 1, "type": "summary", "token_count": 691, "children": [{"id": "raptor_L0_0000", "name": "# Cars (2006)\n\n## Overview\n\n- **Title:** Cars\n- **Studio:** Pixar Animation Studios / Walt Disney Pictures\n- **Director:...", "level": 0, "type": "leaf", "token_count": 138}, {"id": "raptor_L0_0002", "name": "- **Doc Hudson** -- A 1951 Hudson Hornet who is the town judge and doctor. Secretly a legendary three-time Piston Cup ch...", "level": 0, "type": "leaf", "token_count": 92}, {"id": "raptor_L0_0003", "name": "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, the local gas station and diner. Ramone's wife. - **Luigi** -- A y...", "level": 0, "type": "leaf", "token_count": 81}, {"id": "raptor_L0_0004", "name": "- **Sarge** -- A 1941 Willys military jeep who runs a surplus store. Constantly bickers with Fillmore. - **Fillmore** --...", "level": 0, "type": "leaf", "token_count": 95}, {"id": "raptor_L0_0005", "name": "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car, #86. Lightning's ruthless rival on the track. - **The King (Strip...", "level": 0, "type": "leaf", "token_count": 75}, {"id": "raptor_L0_0013", "name": "While exploring Doc's garage, Lightning discovers three Piston Cup trophies and a newspaper clipping revealing Doc is th...", "level": 0, "type": "leaf", "token_count": 70}, {"id": "raptor_L0_0027", "name": "I didn't know you couldn't read.\" -- Doc Hudson\n\n> \"Float like a Cadillac, sting like a Beemer.\" -- Lightning McQueen\n\n>...", "level": 0, "type": "leaf", "token_count": 183}, {"id": "raptor_L0_0028", "name": "It launched one of Pixar's most lucrative franchises, generating billions in merchandise revenue. The film spawned two s...", "level": 0, "type": "leaf", "token_count": 77}, {"id": "raptor_L0_0029", "name": "The film was the last project that **Joe Ranft**, Pixar's beloved head of story, worked on before his death in a car acc...", "level": 0, "type": "leaf", "token_count": 82}]}]};
+    const OVERLAY= {"retrieved_node_ids": [], "scores": []};
+    const MAX_LVL= 1;
+
+    /* ====== PALETTE ====== */
+    const LEVEL_COLORS = [
+      "#3b82f6","#10b981","#f59e0b","#ef4444","#a855f7",
+      "#ec4899","#06b6d4","#84cc16","#f97316","#6366f1"
+    ];
+    function lvlColor(lvl){ return LEVEL_COLORS[lvl % LEVEL_COLORS.length]; }
+
+    /* ====== SETUP ====== */
+    const W = window.innerWidth, H = window.innerHeight;
+    const svg = d3.select("#svg").attr("viewBox",[0,0,W,H]);
+    const gMain = svg.append("g");
+
+    // zoom
+    const zoom = d3.zoom().scaleExtent([0.05,8]).on("zoom", e => gMain.attr("transform",e.transform));
+    svg.call(zoom);
+
+    // layers
+    const gLinks = gMain.append("g").attr("class","links-layer");
+    const gNodes = gMain.append("g").attr("class","nodes-layer");
+    const gLabels= gMain.append("g").attr("class","labels-layer");
+
+    /* ====== POPULATE CONTROLS ====== */
+    const levelSel = document.getElementById("levelFilter");
+    for(let l=0;l<=MAX_LVL;l++){
+      const o=document.createElement("option");
+      o.value=l; o.textContent=`Level ${l} (${l===0?"leaves":"summaries"})`;
+      levelSel.appendChild(o);
+    }
+
+    // legend
+    const legendBox = document.getElementById("legendBox");
+    for(let l=0;l<=MAX_LVL;l++){
+      legendBox.innerHTML += `<div><span class="dot" style="background:${lvlColor(l)}"></span>L${l}</div>`;
+    }
+
+    /* ====== OVERLAY SET ====== */
+    const overlaySet = new Set(OVERLAY.retrieved_node_ids||[]);
+    const overlayScores = {};
+    (OVERLAY.retrieved_node_ids||[]).forEach((id,i) => {
+      overlayScores[id] = (OVERLAY.scores||[])[i] || 0;
+    });
+
+    /* ====== STATE ====== */
+    let currentView = "dag"; // "dag" | "tree"
+    let sim; // d3 force simulation
+
+    /* ====== DAG VIEW ====== */
+    function renderDAG(){
+      gLinks.selectAll("*").remove();
+      gNodes.selectAll("*").remove();
+      gLabels.selectAll("*").remove();
+
+      const nodeData = DAG.nodes.map(d => ({...d}));
+      const nodeMap  = {};
+      nodeData.forEach(d => nodeMap[d.id]=d);
+
+      const linkData = DAG.links.map(d => ({...d}));
+
+      // token_count → radius
+      const maxTok = d3.max(nodeData, d=>d.token_count)||1;
+      const rScale = d3.scaleSqrt().domain([0,maxTok]).range([5,22]);
+
+      // force sim
+      const layerSpacing = H / (MAX_LVL + 3);
+      sim = d3.forceSimulation(nodeData)
+        .force("link", d3.forceLink(linkData).id(d=>d.id).distance(80).strength(d=>d.weight*0.25))
+        .force("charge", d3.forceManyBody().strength(-180))
+        .force("y", d3.forceY(d => (MAX_LVL - d.level + 1) * layerSpacing).strength(0.35))
+        .force("x", d3.forceX(W/2).strength(0.04))
+        .force("collision", d3.forceCollide(d => rScale(d.token_count)+4));
+
+      // links
+      const linkSel = gLinks.selectAll("line").data(linkData).enter().append("line")
+        .attr("class","link")
+        .attr("stroke","#475569")
+        .attr("stroke-opacity", d => 0.15 + d.weight*0.7)
+        .attr("stroke-width", d => 0.5 + d.weight*3);
+
+      // nodes
+      const nodeSel = gNodes.selectAll("g.node").data(nodeData).enter().append("g").attr("class","node");
+
+      nodeSel.each(function(d){
+        const g = d3.select(this);
+        const r = rScale(d.token_count);
+        if(d.type==="leaf"){
+          g.append("circle").attr("r",r).attr("fill",lvlColor(d.level)).attr("stroke","#0f172a").attr("stroke-width",1.5);
+        } else {
+          // diamond for summary nodes
+          const s = r*1.3;
+          g.append("rect").attr("x",-s).attr("y",-s).attr("width",s*2).attr("height",s*2)
+           .attr("transform","rotate(45)").attr("rx",3)
+           .attr("fill",lvlColor(d.level)).attr("stroke","#0f172a").attr("stroke-width",1.5);
+        }
+        // overlay glow
+        if(overlaySet.has(d.id)){
+          g.append("circle").attr("r",r+6).attr("fill","none")
+           .attr("stroke","#fbbf24").attr("stroke-width",3).attr("stroke-dasharray","4,2");
+        }
+      });
+
+      nodeSel.style("cursor","pointer")
+        .on("mouseover", (e,d) => showDetail(d))
+        .on("mouseout", clearDetail)
+        .call(d3.drag()
+          .on("start",(e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
+          .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
+          .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+
+      // labels
+      const labelSel = gLabels.selectAll("text").data(nodeData).enter().append("text")
+        .attr("class","node-label").attr("text-anchor","middle").attr("dy","0.35em")
+        .text(d => d.name.slice(0,30) + (d.name.length>30?"...":""));
+
+      sim.on("tick",()=>{
+        linkSel.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+               .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+        nodeSel.attr("transform",d=>`translate(${d.x},${d.y})`);
+        labelSel.attr("x",d=>d.x).attr("y",d=>d.y - rScale(d.token_count) - 6);
+      });
+
+      // store refs for filtering
+      window._dagRefs = { nodeSel, linkSel, labelSel, nodeData, linkData, nodeMap };
+    }
+
+    /* ====== TREE VIEW ====== */
+    function renderTree(){
+      gLinks.selectAll("*").remove();
+      gNodes.selectAll("*").remove();
+      gLabels.selectAll("*").remove();
+      if(sim) sim.stop();
+
+      const root = d3.hierarchy(TREE);
+      const treeW = Math.max(W - 200, 600);
+      const treeH = Math.max(root.descendants().length * 22, H - 100);
+      const layout = d3.tree().size([treeH, treeW - 200]);
+      layout(root);
+
+      // links
+      gLinks.selectAll("path").data(root.links()).enter().append("path")
+        .attr("class","tree-link")
+        .attr("d", d3.linkHorizontal().x(d=>d.y+100).y(d=>d.x));
+
+      // nodes
+      const nodeSel = gNodes.selectAll("g.tnode").data(root.descendants()).enter().append("g")
+        .attr("class","tnode")
+        .attr("transform", d => `translate(${d.y+100},${d.x})`);
+
+      nodeSel.append("circle")
+        .attr("r", d => d.data.type==="leaf" ? 5 : 8)
+        .attr("fill", d => lvlColor(d.data.level||0))
+        .attr("stroke","#0f172a").attr("stroke-width",1.5);
+
+      // overlay glow
+      nodeSel.filter(d => overlaySet.has(d.data.id)).append("circle")
+        .attr("r",12).attr("fill","none").attr("stroke","#fbbf24").attr("stroke-width",2.5).attr("stroke-dasharray","4,2");
+
+      // labels
+      nodeSel.append("text")
+        .attr("class","node-label")
+        .attr("dx", d => d.children ? -12 : 12)
+        .attr("dy","0.35em")
+        .attr("text-anchor", d => d.children ? "end" : "start")
+        .text(d => (d.data.name||"").slice(0,50) + ((d.data.name||"").length>50?"...":""));
+
+      nodeSel.style("cursor","pointer")
+        .on("mouseover",(e,d) => showDetail(d.data))
+        .on("mouseout", clearDetail);
+
+      // fit
+      svg.call(zoom.transform, d3.zoomIdentity.translate(50,H/2 - treeH/2).scale(0.85));
+    }
+
+    /* ====== DETAIL PANEL ====== */
+    const detEl = document.getElementById("details");
+    function showDetail(d){
+      const score = overlayScores[d.id];
+      detEl.innerHTML = `
+        <div class="row"><strong style="font-size:14px">${d.name||d.id}</strong></div>
+        <div class="row"><strong>ID:</strong> <span class="mono">${d.id}</span></div>
+        <div class="row"><strong>Level:</strong> ${d.level} &nbsp; <strong>Type:</strong> ${d.type}</div>
+        <div class="row"><strong>Tokens:</strong> ${d.token_count}</div>
+        ${score !== undefined ? `<div class="row"><strong>Retrieval score:</strong> ${score.toFixed(4)}</div>` : ""}
+        ${d.full_text ? `<div class="row" style="margin-top:8px;max-height:140px;overflow:auto"><span class="mono">${d.full_text}</span></div>` : ""}
+      `;
+    }
+    function clearDetail(){ detEl.innerHTML = "Hover over a node for details."; }
+
+    /* ====== STATS PANEL ====== */
+    const statEl = document.getElementById("stats");
+    function updateStats(){
+      const nLeaves = DAG.nodes.filter(n=>n.type==="leaf").length;
+      const nSummaries = DAG.nodes.filter(n=>n.type==="summary").length;
+      statEl.innerHTML = `
+        <div class="row"><strong>Total nodes:</strong> ${DAG.nodes.length}</div>
+        <div class="row"><strong>Leaves:</strong> ${nLeaves}</div>
+        <div class="row"><strong>Summaries:</strong> ${nSummaries}</div>
+        <div class="row"><strong>Edges:</strong> ${DAG.links.length}</div>
+        <div class="row"><strong>Levels:</strong> ${MAX_LVL+1}</div>
+        ${overlaySet.size ? `<div class="row"><strong>Retrieved:</strong> ${overlaySet.size} nodes</div>` : ""}
+      `;
+    }
+    updateStats();
+
+    /* ====== VIEW SWITCHING ====== */
+    document.getElementById("btnDAG").addEventListener("click", ()=>{
+      currentView="dag";
+      document.getElementById("btnDAG").classList.add("active");
+      document.getElementById("btnTree").classList.remove("active");
+      renderDAG();
+    });
+    document.getElementById("btnTree").addEventListener("click", ()=>{
+      currentView="tree";
+      document.getElementById("btnTree").classList.add("active");
+      document.getElementById("btnDAG").classList.remove("active");
+      renderTree();
+    });
+
+    /* ====== SEARCH FILTER ====== */
+    document.getElementById("searchInput").addEventListener("input", e => {
+      const q = e.target.value.trim().toLowerCase();
+      if(currentView !== "dag" || !window._dagRefs) return;
+      const {nodeSel, linkSel, labelSel, nodeData, linkData, nodeMap} = window._dagRefs;
+      if(!q){
+        nodeSel.attr("opacity",1); linkSel.attr("opacity",d=>0.15+d.weight*0.7); labelSel.attr("opacity",1);
+        return;
+      }
+      const match = new Set();
+      nodeData.forEach(d => { if(d.name.toLowerCase().includes(q)) match.add(d.id); });
+      nodeSel.attr("opacity", d => match.has(d.id)?1:0.08);
+      labelSel.attr("opacity", d => match.has(d.id)?1:0.05);
+      linkSel.attr("opacity", d => {
+        const sid = typeof d.source==="object"?d.source.id:d.source;
+        const tid = typeof d.target==="object"?d.target.id:d.target;
+        return (match.has(sid)||match.has(tid)) ? 0.6 : 0.03;
+      });
+    });
+
+    /* ====== WEIGHT SLIDER ====== */
+    document.getElementById("weightSlider").addEventListener("input", e => {
+      const thresh = parseFloat(e.target.value);
+      document.getElementById("weightVal").textContent = thresh.toFixed(2);
+      if(currentView !== "dag" || !window._dagRefs) return;
+      const {linkSel} = window._dagRefs;
+      linkSel.attr("display", d => d.weight >= thresh ? null : "none");
+    });
+
+    /* ====== LEVEL FILTER ====== */
+    document.getElementById("levelFilter").addEventListener("change", e => {
+      const val = e.target.value;
+      if(currentView !== "dag" || !window._dagRefs) return;
+      const {nodeSel, labelSel} = window._dagRefs;
+      if(val === "all"){
+        nodeSel.attr("opacity",1); labelSel.attr("opacity",1);
+      } else {
+        const lvl = parseInt(val);
+        nodeSel.attr("opacity", d => d.level===lvl?1:0.1);
+        labelSel.attr("opacity", d => d.level===lvl?1:0.05);
+      }
+    });
+
+    /* ====== INITIAL RENDER ====== */
+    renderDAG();
+
+  })();
+  </script>
+</body>
+</html>

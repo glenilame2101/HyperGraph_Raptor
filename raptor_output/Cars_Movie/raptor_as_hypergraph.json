@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "created_at": "2026-04-08T20:45:05.368175",
+    "source_document": "raptor_tree",
+    "version": "2.0"
+  },
+  "nodes": {
+    "n_bafcf18e": {
+      "id": "n_bafcf18e",
+      "label": "Arrogant and self-centered at the start, he learns humi...",
+      "type": "concept"
+    },
+    "n_000ecd0c": {
+      "id": "n_000ecd0c",
+      "label": "---  ## Plot Summary  ### Act 1: The Race and the Journ...",
+      "type": "concept"
+    },
+    "n_bba3b2d1": {
+      "id": "n_bba3b2d1",
+      "label": "The race ends in an unprecedented three-way tie, and a...",
+      "type": "concept"
+    },
+    "n_9b546656": {
+      "id": "n_9b546656",
+      "label": "When a group of reckless street racers (Boost, DJ, Wing...",
+      "type": "concept"
+    },
+    "n_62817a3b": {
+      "id": "n_62817a3b",
+      "label": "He is apprehended by **Sheriff** after a wild chase and...",
+      "type": "concept"
+    },
+    "n_38a7b639": {
+      "id": "n_38a7b639",
+      "label": "Lightning is sentenced to community service: he must re...",
+      "type": "concept"
+    },
+    "n_44b776ce": {
+      "id": "n_44b776ce",
+      "label": "But the dirt track has a sharp turn, and Lightning flie...",
+      "type": "concept"
+    },
+    "n_5a0c289d": {
+      "id": "n_5a0c289d",
+      "label": "Each resident has a story:  - **Sally** tells Lightning...",
+      "type": "concept"
+    },
+    "n_a3a5e1d2": {
+      "id": "n_a3a5e1d2",
+      "label": "Lightning confronts Doc about his past, but Doc angrily...",
+      "type": "concept"
+    },
+    "n_0c1c55a3": {
+      "id": "n_0c1c55a3",
+      "label": "He drives with Sally to the Wheel Well Motel overlookin...",
+      "type": "concept"
+    },
+    "n_b4ade1c8": {
+      "id": "n_b4ade1c8",
+      "label": "### Act 3: Discovery, Departure, and the Big Race  Just...",
+      "type": "concept"
+    },
+    "n_ca32178b": {
+      "id": "n_ca32178b",
+      "label": "The town is left stunned, and Doc, seeing how heartbrok...",
+      "type": "concept"
+    },
+    "n_27da5f8b": {
+      "id": "n_27da5f8b",
+      "label": "Behind Doc, the entire town of Radiator Springs has com...",
+      "type": "concept"
+    },
+    "n_4403fa1b": {
+      "id": "n_4403fa1b",
+      "label": "The race comes down to the final lap between Lightning,...",
+      "type": "concept"
+    },
+    "n_1d6e04c6": {
+      "id": "n_1d6e04c6",
+      "label": "Lightning **slams on his brakes** just inches from the...",
+      "type": "concept"
+    },
+    "n_e5f5d22f": {
+      "id": "n_e5f5d22f",
+      "label": "### Epilogue  Lightning turns down the Dinoco sponsorsh...",
+      "type": "concept"
+    },
+    "n_dfd5a109": {
+      "id": "n_dfd5a109",
+      "label": "Tourists begin visiting again, the businesses reopen to...",
+      "type": "concept"
+    },
+    "n_fee227a4": {
+      "id": "n_fee227a4",
+      "label": "Route 66's replacement by the Interstate serves as a me...",
+      "type": "concept"
+    },
+    "n_a5e083cc": {
+      "id": "n_a5e083cc",
+      "label": "- **Humility and sportsmanship:** Lightning's decision...",
+      "type": "concept"
+    },
+    "n_75fbdb70": {
+      "id": "n_75fbdb70",
+      "label": "---  ## Notable Quotes  > \"I'm a precision instrument o...",
+      "type": "concept"
+    },
+    "n_95c8c8f3": {
+      "id": "n_95c8c8f3",
+      "label": "They changed him.\" -- Sally Carrera  > \"These are good...",
+      "type": "concept"
+    },
+    "n_e419d8b5": {
+      "id": "n_e419d8b5",
+      "label": "At the final Piston Cup race at the Motor Speedway of t...",
+      "type": "concept"
+    },
+    "n_8bfe5663": {
+      "id": "n_8bfe5663",
+      "label": "# Cars (2006)  ## Overview  - **Title:** Cars - **Studi...",
+      "type": "concept"
+    },
+    "n_7f0aaa11": {
+      "id": "n_7f0aaa11",
+      "label": "- **Doc Hudson** -- A 1951 Hudson Hornet who is the tow...",
+      "type": "concept"
+    },
+    "n_ef0b70f6": {
+      "id": "n_ef0b70f6",
+      "label": "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, t...",
+      "type": "concept"
+    },
+    "n_c7c3669f": {
+      "id": "n_c7c3669f",
+      "label": "- **Sarge** -- A 1941 Willys military jeep who runs a s...",
+      "type": "concept"
+    },
+    "n_1edba299": {
+      "id": "n_1edba299",
+      "label": "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car,...",
+      "type": "concept"
+    },
+    "n_2be8e26f": {
+      "id": "n_2be8e26f",
+      "label": "While exploring Doc's garage, Lightning discovers three...",
+      "type": "concept"
+    },
+    "n_6d0e3a0e": {
+      "id": "n_6d0e3a0e",
+      "label": "I didn't know you couldn't read.\" -- Doc Hudson  > \"Flo...",
+      "type": "concept"
+    },
+    "n_d6fc1991": {
+      "id": "n_d6fc1991",
+      "label": "It launched one of Pixar's most lucrative franchises, g...",
+      "type": "concept"
+    },
+    "n_e2e29ac4": {
+      "id": "n_e2e29ac4",
+      "label": "The film was the last project that **Joe Ranft**, Pixar...",
+      "type": "concept"
+    },
+    "n_2a419217": {
+      "id": "n_2a419217",
+      "label": "Cars is a 2006 animated comedy-adventure from Pixar Ani...",
+      "type": "concept"
+    }
+  },
+  "hyperedges": [
+    {
+      "id": "e_c5530e78",
+      "label": "At the final Piston Cup race at the Motor Speedway of the So",
+      "source": [
+        "Arrogant and self-centered at the start, he learns humi...",
+        "---  ## Plot Summary  ### Act 1: The Race and the Journ...",
+        "The race ends in an unprecedented three-way tie, and a...",
+        "When a group of reckless street racers (Boost, DJ, Wing...",
+        "He is apprehended by **Sheriff** after a wild chase and...",
+        "Lightning is sentenced to community service: he must re...",
+        "But the dirt track has a sharp turn, and Lightning flie...",
+        "Each resident has a story:  - **Sally** tells Lightning...",
+        "Lightning confronts Doc about his past, but Doc angrily...",
+        "He drives with Sally to the Wheel Well Motel overlookin...",
+        "### Act 3: Discovery, Departure, and the Big Race  Just...",
+        "The town is left stunned, and Doc, seeing how heartbrok...",
+        "Behind Doc, the entire town of Radiator Springs has com...",
+        "The race comes down to the final lap between Lightning,...",
+        "Lightning **slams on his brakes** just inches from the...",
+        "### Epilogue  Lightning turns down the Dinoco sponsorsh...",
+        "Tourists begin visiting again, the businesses reopen to...",
+        "Route 66's replacement by the Interstate serves as a me...",
+        "- **Humility and sportsmanship:** Lightning's decision...",
+        "---  ## Notable Quotes  > \"I'm a precision instrument o...",
+        "They changed him.\" -- Sally Carrera  > \"These are good..."
+      ],
+      "target": [
+        "At the final Piston Cup race at the Motor Speedway of t..."
+      ],
+      "weight": 1.0,
+      "chunk_id": "raptor_L1_0000"
+    },
+    {
+      "id": "e_9626d706",
+      "label": "Cars is a 2006 animated comedy-adventure from Pixar Animatio",
+      "source": [
+        "# Cars (2006)  ## Overview  - **Title:** Cars - **Studi...",
+        "- **Doc Hudson** -- A 1951 Hudson Hornet who is the tow...",
+        "- **Flo** -- A 1950s show car who runs Flo's V8 Cafe, t...",
+        "- **Sarge** -- A 1941 Willys military jeep who runs a s...",
+        "- **Chick Hicks** -- A 1979 Shyster Cremlin stock car,...",
+        "While exploring Doc's garage, Lightning discovers three...",
+        "I didn't know you couldn't read.\" -- Doc Hudson  > \"Flo...",
+        "It launched one of Pixar's most lucrative franchises, g...",
+        "The film was the last project that **Joe Ranft**, Pixar..."
+      ],
+      "target": [
+        "Cars is a 2006 animated comedy-adventure from Pixar Ani..."
+      ],
+      "weight": 1.0,
+      "chunk_id": "raptor_L1_0001"
+    }
+  ]
+}
